@@ -9,7 +9,7 @@ import ChainTypes from "components/Utility/ChainTypes";
 import utils from "common/utils";
 import ProposalModal, {finalRequiredPerms} from "../Modal/ProposalModal";
 import NestedApprovalState from "../Account/NestedApprovalState";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import counterpart from "counterpart";
 import pu from "common/permission_utils";
 import LinkToAccountById from "../Utility/LinkToAccountById";

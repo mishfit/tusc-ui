@@ -18,7 +18,7 @@ import {routerTransitioner} from "../../routerTransition";
 import LoadingIndicator from "../LoadingIndicator";
 import counterpart from "counterpart";
 import ChoiceModal from "../Modal/ChoiceModal";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import ifvisible from "ifvisible";
 import {getWalletName} from "branding";
 import {Modal, Button} from "bitshares-ui-style-guide";

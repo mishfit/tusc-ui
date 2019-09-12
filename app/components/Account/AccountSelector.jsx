@@ -5,7 +5,7 @@ import AccountImage from "../Account/AccountImage";
 import AccountStore from "stores/AccountStore";
 import AccountActions from "actions/AccountActions";
 import Translate from "react-translate-component";
-import {ChainStore, PublicKey, ChainValidation, FetchChain} from "bitsharesjs";
+import {ChainStore, PublicKey, ChainValidation, FetchChain} from "tuscjs";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import classnames from "classnames";

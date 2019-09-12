@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {connect} from "alt-react";
 import cname from "classnames";
-import {PrivateKey, Aes, PublicKey, hash} from "bitsharesjs";
-import {ChainConfig} from "bitsharesjs-ws";
+import {PrivateKey, Aes, PublicKey, hash} from "tuscjs";
+import {ChainConfig} from "tuscjs-ws";
 import PrivateKeyStore from "stores/PrivateKeyStore";
 import WalletUnlockActions from "actions/WalletUnlockActions";
 import {WalletCreate} from "components/Wallet/WalletCreate";

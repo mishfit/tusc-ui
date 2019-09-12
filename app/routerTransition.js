@@ -1,5 +1,5 @@
-import {Apis, Manager} from "bitsharesjs-ws";
-import {ChainStore} from "bitsharesjs";
+import {Apis, Manager} from "tuscjs-ws";
+import {ChainStore} from "tuscjs";
 
 // Stores
 import iDB from "idb-instance";
@@ -782,7 +782,7 @@ export default routerTransitioner.willTransitionTo.bind(routerTransitioner);
  */
 class Pinger {
     /**
-     * @param connectionManager bitsharesjs connectionmanager
+     * @param connectionManager tuscjs connectionmanager
      * @param updateLatencies callback to update the settings object
      * @param updateTransitionTarget callback to update the message displayed to the user
      * @param pingAll if true, resolve after pinging all

@@ -1,5 +1,5 @@
-import {Apis} from "bitsharesjs-ws";
-import {ChainStore, FetchChain} from "bitsharesjs";
+import {Apis} from "tuscjs-ws";
+import {ChainStore, FetchChain} from "tuscjs";
 import {Tabs, Collapse, Icon as AntIcon} from "bitshares-ui-style-guide";
 import cnames from "classnames";
 import translator from "counterpart";

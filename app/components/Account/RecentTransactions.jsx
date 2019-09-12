@@ -5,7 +5,7 @@ import Operation from "../Blockchain/Operation";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import utils from "common/utils";
-import {ChainTypes as grapheneChainTypes, FetchChain} from "bitsharesjs";
+import {ChainTypes as grapheneChainTypes, FetchChain} from "tuscjs";
 import ps from "perfect-scrollbar";
 import counterpart from "counterpart";
 import Icon from "../Icon/Icon";
