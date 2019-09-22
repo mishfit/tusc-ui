@@ -1,6 +1,5 @@
 import React from "react";
 import {connect} from "alt-react";
-import MarketsStore from "../stores/MarketsStore";
 import SettingsStore from "../stores/SettingsStore";
 import {PRICE_ALERT_TYPES} from "../services/Exchange";
 import {Notification, Icon} from "bitshares-ui-style-guide";
@@ -186,11 +185,10 @@ export default connect(
     PriceAlertNotifications,
     {
         listenTo() {
-            return [MarketsStore, SettingsStore];
+            return [SettingsStore];
         },
         getProps() {
             return {
-                allMarketStats: MarketsStore.getState().allMarketStats,
                 priceAlert: SettingsStore.getState().priceAlert.toJS()
             };
         }

@@ -8,7 +8,6 @@ import {ChainStore} from "tuscjs";
 import BindToChainState from "../Utility/BindToChainState";
 import AltContainer from "alt-container";
 import MarketUtils from "common/market_utils";
-import MarketsStore from "stores/MarketsStore";
 import SettingsStore from "stores/SettingsStore";
 
 Treemap(ReactHighcharts.Highcharts);
@@ -100,9 +99,9 @@ class AccountTreemap extends React.Component {
                     const percent = (finalValue / totalValue) * 100;
 
                     /*
-                * Filter out assets that make up a small percentage of
-                * the total value of the account
-                */
+                     * Filter out assets that make up a small percentage of
+                     * the total value of the account
+                     */
                     if (percent < 0.5) return null;
 
                     return finalValue >= 1
@@ -205,9 +204,11 @@ class AccountTreemapBalanceWrapper extends React.Component {
     };
 
     render() {
-        let assets = this.props.balanceObjects.filter(a => !!a).map(a => {
-            return a.get("asset_type");
-        });
+        let assets = this.props.balanceObjects
+            .filter(a => !!a)
+            .map(a => {
+                return a.get("asset_type");
+            });
         return (
             <AccountTreemap
                 preferredAsset={this.props.settings.get("unit", "1.3.0")}
@@ -224,11 +225,8 @@ export default class AccountTreemapWrapper extends React.Component {
     render() {
         return (
             <AltContainer
-                stores={[SettingsStore, MarketsStore]}
+                stores={[SettingsStore]}
                 inject={{
-                    marketStats: () => {
-                        return MarketsStore.getState().allMarketStats;
-                    },
                     settings: () => {
                         return SettingsStore.getState().settings;
                     }

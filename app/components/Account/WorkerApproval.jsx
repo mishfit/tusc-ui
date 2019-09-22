@@ -5,7 +5,6 @@ import ChainTypes from "../Utility/ChainTypes";
 import FormattedAsset from "../Utility/FormattedAsset";
 import LinkToAccountById from "../Utility/LinkToAccountById";
 import BindToChainState from "../Utility/BindToChainState";
-import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
 import Icon from "components/Icon/Icon";
 import PropTypes from "prop-types";
 
@@ -62,15 +61,15 @@ class WorkerApproval extends React.Component {
         let approvalState = this.props.vote_ids.has(worker.vote_for)
             ? true
             : this.props.vote_ids.has(worker.vote_against)
-                ? false
-                : null;
+            ? false
+            : null;
 
         let fundedPercent = 0;
 
         if (worker.daily_pay < this.props.rest) {
             fundedPercent = 100;
         } else if (this.props.rest > 0) {
-            fundedPercent = this.props.rest / worker.daily_pay * 100;
+            fundedPercent = (this.props.rest / worker.daily_pay) * 100;
         }
 
         let startDate = counterpart.localize(
@@ -165,30 +164,6 @@ class WorkerApproval extends React.Component {
                         className="hide-column-small"
                     >
                         {utils.format_number(fundedPercent, 2)}%
-                    </td>
-                )}
-
-                <td style={{textAlign: "right"}} className="hide-column-small">
-                    <EquivalentValueComponent
-                        hide_asset
-                        fromAsset="1.3.0"
-                        toAsset={this.props.preferredUnit}
-                        amount={worker.daily_pay}
-                    />
-                </td>
-
-                {isExpired || isProposed ? null : (
-                    <td style={{textAlign: "right"}}>
-                        {this.props.rest <= 0 ? (
-                            "0.00"
-                        ) : (
-                            <EquivalentValueComponent
-                                hide_asset
-                                fromAsset="1.3.0"
-                                toAsset={this.props.preferredUnit}
-                                amount={this.props.rest}
-                            />
-                        )}
                     </td>
                 )}
 

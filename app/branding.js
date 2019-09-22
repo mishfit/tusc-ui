@@ -65,9 +65,7 @@ export function getDefaultLogin() {
  * @returns {[string,string,string,string,string,string]}
  */
 export function getUnits(chainId = "4018d784") {
-    if (chainId === "4018d784")
-        return ["BTS", "USD", "CNY", "BTC", "EUR", "GBP"];
-    else if (chainId === "39f5e2ed") return ["TEST"];
+    return ["TUSC"];
 }
 
 /**
@@ -77,7 +75,7 @@ export function getUnits(chainId = "4018d784") {
  */
 
 export function getMyMarketsBases() {
-    return ["BTC", "ETH", "BTS", "USD", "CNY"];
+    return ["TUSC"];
 }
 
 /**
@@ -87,17 +85,7 @@ export function getMyMarketsBases() {
  */
 export function getMyMarketsQuotes() {
     let tokens = {
-        nativeTokens: [
-            "BTC",
-            "BTS",
-            "CNY",
-            "EUR",
-            "GOLD",
-            "KRW",
-            "RUBLE",
-            "SILVER",
-            "USD"
-        ],
+        nativeTokens: ["TUSC"],
         bridgeTokens: ["BRIDGE.BCO", "BRIDGE.BTC", "BRIDGE.MONA", "BRIDGE.ZNY"],
         gdexTokens: ["GDEX.BTC", "GDEX.BTO", "GDEX.EOS", "GDEX.ETH"],
         openledgerTokens: [

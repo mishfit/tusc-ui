@@ -10,7 +10,6 @@ import {ChainStore} from "tuscjs";
 import SettingsActions from "actions/SettingsActions";
 import utils from "common/utils";
 import {Tabs, Tab} from "../Utility/Tabs";
-import AccountOrders from "./AccountOrders";
 import cnames from "classnames";
 import TranslateWithLinks from "../Utility/TranslateWithLinks";
 import {checkMarginStatus} from "common/accountHelper";
@@ -30,7 +29,7 @@ class AccountOverview extends React.Component {
             ), // alphabetical A -> B, numbers high to low
             shownAssets: props.viewSettings.get("shownAssets", "active"),
             alwaysShowAssets: [
-                "BTS"
+                "TUSC"
                 // "USD",
                 // "CNY",
                 // "OPEN.BTC",
@@ -546,29 +545,6 @@ class AccountOverview extends React.Component {
                                         balanceObjects={includedBalancesList}
                                     />
                                 )}
-                            </Tab>
-
-                            <Tab
-                                title="account.open_orders"
-                                subText={ordersValue}
-                            >
-                                <AccountOrders {...this.props}>
-                                    <tr className="total-value">
-                                        <td
-                                            colSpan="8"
-                                            style={{textAlign: "right"}}
-                                        >
-                                            {totalValueText}
-                                        </td>
-                                        <td
-                                            colSpan="1"
-                                            style={{textAlign: "right"}}
-                                        >
-                                            {ordersValue}
-                                        </td>
-                                        {this.props.isMyAccount ? <td /> : null}
-                                    </tr>
-                                </AccountOrders>
                             </Tab>
 
                             <Tab

@@ -6,7 +6,6 @@ import BlocksContainer from "./BlocksContainer";
 import AssetsContainer from "./AssetsContainer";
 import AccountsContainer from "./AccountsContainer";
 import counterpart from "counterpart";
-import MarketsContainer from "../Exchange/MarketsContainer";
 import {Tabs} from "bitshares-ui-style-guide";
 
 class Explorer extends React.Component {
@@ -44,12 +43,6 @@ class Explorer extends React.Component {
                     link: "/explorer/committee-members",
                     translate: "explorer.committee_members.title",
                     content: CommitteeMembers
-                },
-                {
-                    name: "markets",
-                    link: "/explorer/markets",
-                    translate: "markets.title",
-                    content: MarketsContainer
                 },
                 {
                     name: "fees",

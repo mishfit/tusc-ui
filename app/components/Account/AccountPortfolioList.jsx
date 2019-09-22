@@ -1,12 +1,9 @@
 import React from "react";
 import debounceRender from "react-debounce-render";
 import BalanceComponent from "../Utility/BalanceComponent";
-import {BalanceValueComponent} from "../Utility/EquivalentValueComponent";
-import {Market24HourChangeComponent} from "../Utility/MarketChangeComponent";
 import assetUtils from "common/asset_utils";
 import counterpart from "counterpart";
 import {Link} from "react-router-dom";
-import EquivalentPrice from "../Utility/EquivalentPrice";
 import LinkToAssetById from "../Utility/LinkToAssetById";
 import BorrowModal from "../Modal/BorrowModal";
 import ReactTooltip from "react-tooltip";
@@ -15,7 +12,6 @@ import {ChainStore} from "tuscjs";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
 import GatewayStore from "stores/GatewayStore";
-import MarketsStore from "stores/MarketsStore";
 import Icon from "../Icon/Icon";
 import PulseIcon from "../Icon/PulseIcon";
 import utils from "common/utils";
@@ -89,9 +85,9 @@ class AccountPortfolioList extends React.Component {
 
     _checkRefAssignments() {
         /*
-        * In order for sorting to work all refs must be assigned, so we check
-        * this here and update the state to trigger a rerender
-        */
+         * In order for sorting to work all refs must be assigned, so we check
+         * this here and update the state to trigger a rerender
+         */
         if (!this.state.allRefsAssigned) {
             let refKeys = ["qtyRefs", "priceRefs", "valueRefs", "changeRefs"];
             const allRefsAssigned = refKeys.reduce((a, b) => {
@@ -313,8 +309,8 @@ class AccountPortfolioList extends React.Component {
                 [action === "bridge_modal"
                     ? "bridgeAsset"
                     : action === "deposit_modal"
-                        ? "depositAsset"
-                        : "withdrawAsset"]: asset,
+                    ? "depositAsset"
+                    : "withdrawAsset"]: asset,
                 fiatModal
             },
             () => {
@@ -598,39 +594,6 @@ class AccountPortfolioList extends React.Component {
                     <td style={{textAlign: "right"}}>
                         {hasBalance || hasOnOrder ? (
                             <BalanceComponent balance={balance} hide_asset />
-                        ) : null}
-                    </td>
-                    <td
-                        style={{textAlign: "right"}}
-                        className="column-hide-small"
-                    >
-                        <EquivalentPrice
-                            fromAsset={asset.get("id")}
-                            pulsate={{reverse: true, fill: "forwards"}}
-                            hide_symbols
-                        />
-                    </td>
-                    <td
-                        style={{textAlign: "right"}}
-                        className="column-hide-small"
-                    >
-                        <Market24HourChangeComponent
-                            base={asset.get("id")}
-                            quote={preferredUnit}
-                            marketId={marketId}
-                            hide_symbols
-                        />
-                    </td>
-                    <td
-                        style={{textAlign: "right"}}
-                        className="column-hide-small"
-                    >
-                        {hasBalance || hasOnOrder ? (
-                            <BalanceValueComponent
-                                balance={balance}
-                                toAsset={preferredUnit}
-                                hide_asset
-                            />
                         ) : null}
                     </td>
                     {showAssetPercent ? (
@@ -1136,7 +1099,7 @@ AccountPortfolioList = connect(
     AccountPortfolioList,
     {
         listenTo() {
-            return [SettingsStore, GatewayStore, MarketsStore];
+            return [SettingsStore, GatewayStore];
         },
         getProps() {
             return {
@@ -1144,8 +1107,7 @@ AccountPortfolioList = connect(
                 viewSettings: SettingsStore.getState().viewSettings,
                 backedCoins: GatewayStore.getState().backedCoins,
                 bridgeCoins: GatewayStore.getState().bridgeCoins,
-                gatewayDown: GatewayStore.getState().down,
-                allMarketStats: MarketsStore.getState().allMarketStats
+                gatewayDown: GatewayStore.getState().down
             };
         }
     }

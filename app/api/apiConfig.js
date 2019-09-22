@@ -41,7 +41,6 @@ export const cryptoBridgeAPIs = {
     BASE: "https://api.crypto-bridge.org/api/v1",
     COINS_LIST: "/coins",
     ACTIVE_WALLETS: "/wallets",
-    MARKETS: "/markets",
     TRADING_PAIRS: "/trading-pairs"
 };
 
@@ -138,7 +137,7 @@ export const settingsAPIs = {
             url: "ws://18.220.127.200:8090",
             location: "Virginia",
             region: "Northern America",
-            country: "United States of America",
+            country: "U.S.A."
             //operator: "Witness: openledger-dc",
             //contact: "telegram:mtopenledger"
         }

@@ -15,7 +15,6 @@ import AccountSelector from "./AccountSelector";
 import Icon from "../Icon/Icon";
 import AssetName from "../Utility/AssetName";
 import counterpart from "counterpart";
-import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
 import FormattedAsset from "../Utility/FormattedAsset";
 import SettingsStore from "stores/SettingsStore";
 import stringSimilarity from "string-similarity";
@@ -444,8 +443,8 @@ class AccountVoting extends React.Component {
             let now = new Date();
 
             /* Use the last valid budget object to estimate the current budget object id.
-            ** Budget objects are created once per hour
-            */
+             ** Budget objects are created once per hour
+             */
             let currentID =
                 idIndex +
                 Math.floor(
@@ -1003,24 +1002,6 @@ class AccountVoting extends React.Component {
                                     </div>
                                 </div>
 
-                                {/* {showExpired ? null : (
-                                <div style={{paddingTop: 10, paddingBottom: 20}}>
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <Translate content="account.votes.total_budget" />:</td>
-                                                <td style={{paddingLeft: 20, textAlign: "right"}}>
-                                                    &nbsp;{globalObject ? <FormattedAsset amount={totalBudget} asset="1.3.0" decimalOffset={5}/> : null}
-                                                    <span>&nbsp;({globalObject ? <EquivalentValueComponent fromAsset="1.3.0" toAsset={preferredUnit} amount={totalBudget}/> : null})</span>
-                                                </td></tr>
-                                            <tr>
-                                                <td><Translate content="account.votes.unused_budget" />:</td>
-                                                <td style={{paddingLeft: 20, textAlign: "right"}}> {globalObject ? <FormattedAsset amount={unusedBudget} asset="1.3.0" decimalOffset={5}/> : null}</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>)} */}
-
                                 <table className="table dashboard-table table-hover">
                                     {workerTableIndex ===
                                     2 ? null : workerTableIndex === 0 ? (
@@ -1070,25 +1051,6 @@ class AccountVoting extends React.Component {
                                                     />
                                                     )
                                                 </th>
-                                                <th
-                                                    colSpan="2"
-                                                    className="hide-column-small"
-                                                />
-                                                <th
-                                                    style={{textAlign: "right"}}
-                                                >
-                                                    {globalObject ? (
-                                                        <EquivalentValueComponent
-                                                            hide_asset
-                                                            fromAsset="1.3.0"
-                                                            toAsset={
-                                                                preferredUnit
-                                                            }
-                                                            amount={totalBudget}
-                                                        />
-                                                    ) : null}
-                                                </th>
-                                                <th className="hide-column-small" />
                                             </tr>
                                             <tr>
                                                 <th
@@ -1190,8 +1152,8 @@ class AccountVoting extends React.Component {
                                         {workerTableIndex === 0
                                             ? newWorkers
                                             : workerTableIndex === 1
-                                                ? workers
-                                                : expiredWorkers}
+                                            ? workers
+                                            : expiredWorkers}
                                     </tbody>
                                 </table>
                             </Tab>
