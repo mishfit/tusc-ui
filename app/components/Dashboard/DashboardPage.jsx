@@ -7,8 +7,7 @@ import AccountStore from "stores/AccountStore";
 import SettingsStore from "stores/SettingsStore";
 
 import {Tabs, Tab} from "../Utility/Tabs";
-import {StarredMarkets, FeaturedMarkets} from "./Markets";
-import {getPossibleGatewayPrefixes} from "common/gateways";
+//import {getPossibleGatewayPrefixes} from "common/gateways";
 
 class DashboardPage extends React.Component {
     render() {
@@ -47,9 +46,6 @@ class DashboardPage extends React.Component {
                                     className="account-tabs"
                                     tabsClass="account-overview no-padding bordered-header content-block"
                                 >
-                                    <Tab title="dashboard.starred_markets">
-                                        <StarredMarkets />
-                                    </Tab>
                                     {preferredBases.sort().map(q => {
                                         let title = (
                                             <span>
@@ -71,17 +67,17 @@ class DashboardPage extends React.Component {
                                             </span>
                                         );
 
-                                        return (
-                                            <Tab key={q} title={title}>
-                                                <FeaturedMarkets
-                                                    quotes={[q].concat(
-                                                        getPossibleGatewayPrefixes(
-                                                            [q]
-                                                        )
-                                                    )}
-                                                />
-                                            </Tab>
-                                        );
+                                        // return (
+                                        //     <Tab key={q} title={title}>
+                                        //         <FeaturedMarkets
+                                        //             quotes={[q].concat(
+                                        //                 getPossibleGatewayPrefixes(
+                                        //                     [q]
+                                        //                 )
+                                        //             )}
+                                        //         />
+                                        //     </Tab>
+                                        // );
                                     })}
                                 </Tabs>
                             </div>

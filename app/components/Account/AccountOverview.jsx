@@ -5,11 +5,10 @@ import TotalBalanceValue from "../Utility/TotalBalanceValue";
 import MarginPositionsTable from "./MarginPositionsTable";
 import {RecentTransactions} from "./RecentTransactions";
 import Proposals from "components/Account/Proposals";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import SettingsActions from "actions/SettingsActions";
 import utils from "common/utils";
 import {Tabs, Tab} from "../Utility/Tabs";
-import AccountOrders from "./AccountOrders";
 import cnames from "classnames";
 import TranslateWithLinks from "../Utility/TranslateWithLinks";
 import {checkMarginStatus} from "common/accountHelper";
@@ -27,7 +26,7 @@ class AccountOverview extends React.Component {
         this.state = {
             shownAssets: props.viewSettings.get("shownAssets", "active"),
             alwaysShowAssets: [
-                "BTS"
+                "TUSC"
                 // "USD",
                 // "CNY",
                 // "OPEN.BTC",
@@ -400,22 +399,6 @@ class AccountOverview extends React.Component {
                                         balanceObjects={includedBalancesList}
                                     />
                                 )}
-                            </Tab>
-
-                            <Tab
-                                title="account.open_orders"
-                                subText={ordersValue}
-                            >
-                                <AccountOrders {...this.props}>
-                                    <div className="total-value">
-                                        <span className="text">
-                                            {totalValueText}
-                                        </span>
-                                        <span className="value">
-                                            {ordersValue}
-                                        </span>
-                                    </div>
-                                </AccountOrders>
                             </Tab>
 
                             <Tab

@@ -4,11 +4,10 @@ import Treemap from "highcharts/modules/treemap";
 import Heatmap from "highcharts/modules/heatmap";
 import utils from "common/utils";
 import ChainTypes from "../Utility/ChainTypes";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import BindToChainState from "../Utility/BindToChainState";
 import AltContainer from "alt-container";
 import MarketUtils from "common/market_utils";
-import MarketsStore from "stores/MarketsStore";
 import SettingsStore from "stores/SettingsStore";
 import {Link, withRouter} from "react-router-dom";
 
@@ -102,9 +101,9 @@ class AccountTreemap extends React.Component {
                     const percent = (finalValue / totalValue) * 100;
 
                     /*
-                * Filter out assets that make up a small percentage of
-                * the total value of the account
-                */
+                     * Filter out assets that make up a small percentage of
+                     * the total value of the account
+                     */
                     if (percent < 0.5) return null;
                     if (finalValue < 1) return null;
                     const symbol = asset.get("symbol");
@@ -234,9 +233,11 @@ class AccountTreemapBalanceWrapper extends React.Component {
     };
 
     render() {
-        let assets = this.props.balanceObjects.filter(a => !!a).map(a => {
-            return a.get("asset_type");
-        });
+        let assets = this.props.balanceObjects
+            .filter(a => !!a)
+            .map(a => {
+                return a.get("asset_type");
+            });
         return (
             <AccountTreemap
                 preferredAsset={this.props.settings.get("unit", "1.3.0")}
@@ -253,11 +254,8 @@ class AccountTreemapWrapper extends React.Component {
     render() {
         return (
             <AltContainer
-                stores={[SettingsStore, MarketsStore]}
+                stores={[SettingsStore]}
                 inject={{
-                    marketStats: () => {
-                        return MarketsStore.getState().allMarketStats;
-                    },
                     settings: () => {
                         return SettingsStore.getState().settings;
                     }

@@ -7,7 +7,6 @@ import LoginSelector from "../LoginSelector";
 import SettingsActions from "actions/SettingsActions";
 import SettingsStore from "stores/SettingsStore";
 import AccountStore from "stores/AccountStore";
-import MarketsStore from "stores/MarketsStore";
 import {Tabs, Tab} from "../Utility/Tabs";
 import AltContainer from "alt-container";
 
@@ -15,7 +14,7 @@ class AccountsContainer extends React.Component {
     render() {
         return (
             <AltContainer
-                stores={[AccountStore, SettingsStore, MarketsStore]}
+                stores={[AccountStore, SettingsStore]}
                 inject={{
                     contacts: () => {
                         return AccountStore.getState().accountContacts;

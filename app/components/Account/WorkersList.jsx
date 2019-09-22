@@ -4,7 +4,6 @@ import utils from "common/utils";
 import FormattedAsset from "../Utility/FormattedAsset";
 import LinkToAccountById from "../Utility/LinkToAccountById";
 import BindToChainState from "../Utility/BindToChainState";
-import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
 import Icon from "components/Icon/Icon";
 import PaginatedList from "components/Utility/PaginatedList";
 import Translate from "react-translate-component";
@@ -94,8 +93,8 @@ class WorkerList extends React.Component {
                     return a.assets_id > b.assets_id
                         ? 1
                         : a.assets_id < b.assets_id
-                            ? -1
-                            : 0;
+                        ? -1
+                        : 0;
                 },
                 render: item => {
                     return <span style={{whiteSpace: "nowrap"}}>{item}</span>;
@@ -114,8 +113,8 @@ class WorkerList extends React.Component {
                     return a.description.name > b.description.name
                         ? 1
                         : a.description.name < b.description.name
-                            ? -1
-                            : 0;
+                        ? -1
+                        : 0;
                 },
                 render: item => {
                     return (
@@ -294,20 +293,7 @@ class WorkerList extends React.Component {
                                       whiteSpace: "nowrap"
                                   }}
                               >
-                                  {item.rest <= 0 ? (
-                                      item.isExpired ? (
-                                          "-"
-                                      ) : (
-                                          "0.00"
-                                      )
-                                  ) : (
-                                      <EquivalentValueComponent
-                                          hide_asset
-                                          fromAsset="1.3.0"
-                                          toAsset={item.preferredUnit}
-                                          amount={item.rest}
-                                      />
-                                  )}
+                                  {item.isExpired ? "-" : "0.00"}
                               </span>
                           );
                       }
@@ -348,13 +334,7 @@ class WorkerList extends React.Component {
                                       ].bind(this, item)
                             }
                         >
-                            <EquivalentValueComponent
-                                hide_asset
-                                fromAsset="1.3.0"
-                                toAsset={item.preferredUnit}
-                                amount={item.daily_pay}
-                                style={{whiteSpace: "nowrap"}}
-                            />
+                            {item.daily_pay}
                         </span>
                     );
                 }
@@ -422,8 +402,8 @@ class WorkerList extends React.Component {
             let approvalState = vote_ids.has(worker.vote_for)
                 ? true
                 : vote_ids.has(worker.vote_against)
-                    ? false
-                    : null;
+                ? false
+                : null;
 
             let fundedPercent = 0;
 
@@ -683,10 +663,10 @@ class WorkerList extends React.Component {
             workerTableIndex === 0
                 ? newWorkers
                 : workerTableIndex === 1
-                    ? activeWorkers
-                    : workerTableIndex === 2
-                        ? expiredWorkers
-                        : polls;
+                ? activeWorkers
+                : workerTableIndex === 2
+                ? expiredWorkers
+                : polls;
         return (
             <PaginatedList
                 className="table dashboard-table table-hover"

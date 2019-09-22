@@ -12,9 +12,9 @@ import HelpContent from "../Utility/HelpContent";
 import assetUtils from "common/asset_utils";
 import utils from "common/utils";
 import FormattedTime from "../Utility/FormattedTime";
-import {ChainStore} from "bitsharesjs";
-import {Apis} from "bitsharesjs-ws";
-import {CallOrder, CollateralBid, FeedPrice} from "common/MarketClasses";
+import {ChainStore} from "tuscjs";
+import {Apis} from "tuscjs-ws";
+import {CallOrder, FeedPrice} from "common/MarketClasses";
 import Page404 from "../Page404/Page404";
 import FeePoolOperation from "../Account/FeePoolOperation";
 import AccountStore from "stores/AccountStore";
@@ -22,7 +22,6 @@ import {connect} from "alt-react";
 import counterpart from "counterpart";
 import AssetOwnerUpdate from "./AssetOwnerUpdate";
 import AssetPublishFeed from "./AssetPublishFeed";
-import BidCollateralOperation from "./BidCollateralOperation";
 import {Tab, Tabs} from "../Utility/Tabs";
 import {Tooltip, Icon, Table, Tabs as AntTabs} from "bitshares-ui-style-guide";
 // TODO: Replace remaining old style Tabs with new
@@ -345,8 +344,8 @@ class Asset extends React.Component {
         let preferredMarket = description.market
             ? description.market
             : core_asset
-                ? core_asset.get("symbol")
-                : "BTS";
+            ? core_asset.get("symbol")
+            : "BTS";
         if ("bitasset" in asset && asset.bitasset.is_prediction_market) {
             preferredMarket = ChainStore.getAsset(
                 asset.bitasset.options.short_backing_asset
@@ -1040,40 +1039,6 @@ class Asset extends React.Component {
                         asset={asset.id}
                         account={this.props.currentAccount}
                         currentOwner={asset.issuer}
-                    />
-                </div>
-            </div>
-        );
-    }
-
-    renderCollateralBid(asset) {
-        return (
-            <div className="grid-content small-no-padding">
-                <div className="asset-card no-padding">
-                    <div className="card-divider">
-                        <Translate content="explorer.asset.collateral.bid" />
-                    </div>
-                    <Translate
-                        component="p"
-                        content="explorer.asset.collateral.bid_text"
-                        asset={asset.symbol}
-                    />
-
-                    <Translate
-                        component="p"
-                        content="explorer.asset.settlement.gs_included_on_revival"
-                    />
-
-                    <Translate
-                        component="p"
-                        content="explorer.asset.collateral.remove_bid"
-                    />
-
-                    <BidCollateralOperation
-                        asset={asset.symbol}
-                        funderAccountName={this.props.currentAccount}
-                        onUpdate={this.updateOnCollateralBid.bind(this)}
-                        hideBalance
                     />
                 </div>
             </div>

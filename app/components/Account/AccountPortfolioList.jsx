@@ -1,21 +1,17 @@
 import React from "react";
 import debounceRender from "react-debounce-render";
 import BalanceComponent from "../Utility/BalanceComponent";
-import {BalanceValueComponent} from "../Utility/EquivalentValueComponent";
-import {Market24HourChangeComponent} from "../Utility/MarketChangeComponent";
 import assetUtils from "common/asset_utils";
 import counterpart from "counterpart";
 import {Link} from "react-router-dom";
-import EquivalentPrice from "../Utility/EquivalentPrice";
 import LinkToAssetById from "../Utility/LinkToAssetById";
 import BorrowModal from "../Modal/BorrowModal";
 import ReactTooltip from "react-tooltip";
 import {getBackedCoin} from "common/gatewayUtils";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
 import GatewayStore from "stores/GatewayStore";
-import MarketsStore from "stores/MarketsStore";
 import Icon from "../Icon/Icon";
 import PulseIcon from "../Icon/PulseIcon";
 import utils from "common/utils";
@@ -334,8 +330,8 @@ class AccountPortfolioList extends React.Component {
                 [action === "bridge_modal"
                     ? "bridgeAsset"
                     : action === "deposit_modal"
-                        ? "depositAsset"
-                        : "withdrawAsset"]: asset,
+                    ? "depositAsset"
+                    : "withdrawAsset"]: asset,
                 fiatModal
             },
             () => {
@@ -836,17 +832,6 @@ class AccountPortfolioList extends React.Component {
                 this.props.account
             );
 
-            /* Popover content */
-            settleLink = (
-                <a onClick={this._onSettleAsset.bind(this, asset.get("id"))}>
-                    <Icon
-                        name="settle"
-                        title="icons.settle"
-                        className="icon-14px"
-                    />
-                </a>
-            );
-
             const includeAsset = !hiddenAssets.includes(asset_type);
             const hasBalance = !!balanceObject.get("balance");
             const hasOnOrder = !!orders[asset_type];
@@ -889,13 +874,38 @@ class AccountPortfolioList extends React.Component {
                 backingAsset
             );
             let settlePriceTitle;
-            if (
-                isBitAsset &&
-                asset.get("bitasset").get("settlement_fund") > 0
-            ) {
-                settlePriceTitle = "tooltip.global_settle";
-            } else {
-                settlePriceTitle = "tooltip.settle";
+
+            if (isBitAsset) {
+                const globally_settled =
+                    asset.get("bitasset").get("settlement_fund") > 0;
+                const isPrediction = asset.getIn([
+                    "bitasset",
+                    "is_prediction_market"
+                ]);
+                if (globally_settled) {
+                    settlePriceTitle = "tooltip.global_settle";
+                } else if (isPrediction) {
+                    settlePriceTitle = "tooltip.settle_market_prediction";
+                } else {
+                    settlePriceTitle = "tooltip.settle";
+                }
+                settleLink =
+                    isPrediction && !globally_settled ? (
+                        <AntIcon type={"question-circle"} />
+                    ) : (
+                        <a
+                            onClick={this._onSettleAsset.bind(
+                                this,
+                                asset.get("id")
+                            )}
+                        >
+                            <Icon
+                                name="settle"
+                                title="icons.settle"
+                                className="icon-14px"
+                            />
+                        </a>
+                    );
             }
 
             let preferredAsset = ChainStore.getAsset(preferredUnit);
@@ -1402,7 +1412,7 @@ AccountPortfolioList = connect(
     AccountPortfolioList,
     {
         listenTo() {
-            return [SettingsStore, GatewayStore, MarketsStore];
+            return [SettingsStore, GatewayStore];
         },
         getProps() {
             return {
@@ -1410,8 +1420,7 @@ AccountPortfolioList = connect(
                 viewSettings: SettingsStore.getState().viewSettings,
                 backedCoins: GatewayStore.getState().backedCoins,
                 bridgeCoins: GatewayStore.getState().bridgeCoins,
-                gatewayDown: GatewayStore.getState().down,
-                allMarketStats: MarketsStore.getState().allMarketStats
+                gatewayDown: GatewayStore.getState().down
             };
         }
     }

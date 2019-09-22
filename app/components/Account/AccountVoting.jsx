@@ -2,7 +2,7 @@ import React from "react";
 import Immutable from "immutable";
 import Translate from "react-translate-component";
 import accountUtils from "common/account_utils";
-import {ChainStore, FetchChainObjects} from "bitsharesjs";
+import {ChainStore, FetchChainObjects} from "tuscjs";
 import WorkersList from "./WorkersList";
 import VotingAccountsList from "./VotingAccountsList";
 import cnames from "classnames";
@@ -15,7 +15,6 @@ import AccountSelector from "./AccountSelector";
 import Icon from "../Icon/Icon";
 import AssetName from "../Utility/AssetName";
 import counterpart from "counterpart";
-import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
 import FormattedAsset from "../Utility/FormattedAsset";
 import SettingsStore from "stores/SettingsStore";
 import {
@@ -993,27 +992,6 @@ class AccountVoting extends React.Component {
                                                 amount={voteThreshold}
                                                 asset="1.3.0"
                                             />
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col span={3}>
-                                            <Translate content="account.votes.total_budget" />{" "}
-                                            (<AssetName name={preferredUnit} />)
-                                        </Col>
-                                        <Col
-                                            span={3}
-                                            style={{
-                                                marginLeft: "10px"
-                                            }}
-                                        >
-                                            {globalObject ? (
-                                                <EquivalentValueComponent
-                                                    hide_asset
-                                                    fromAsset="1.3.0"
-                                                    toAsset={preferredUnit}
-                                                    amount={totalBudget}
-                                                />
-                                            ) : null}
                                         </Col>
                                     </Row>
                                 </div>

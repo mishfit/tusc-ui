@@ -2,13 +2,10 @@ import React from "react";
 import BindToChainState from "components/Utility/BindToChainState";
 import DepositWithdrawAssetSelector from "../DepositWithdraw/DepositWithdrawAssetSelector";
 import Translate from "react-translate-component";
-import ExchangeInput from "components/Exchange/ExchangeInput";
 import AssetName from "../Utility/AssetName";
 import {extend, debounce} from "lodash-es";
 import GatewayStore from "stores/GatewayStore";
 import AssetStore from "stores/AssetStore";
-import MarketsStore from "stores/MarketsStore";
-import MarketsActions from "actions/MarketsActions";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
 import Immutable from "immutable";
@@ -39,7 +36,7 @@ import {
 import AmountSelector from "components/Utility/AmountSelectorStyleGuide";
 import {checkFeeStatusAsync, checkBalance} from "common/trxHelper";
 import AccountSelector from "components/Account/AccountSelector";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 const gatewayBoolCheck = "withdrawalAllowed";
 
 import {getAssetAndGateway, getIntermediateAccount} from "common/gatewayUtils";
@@ -184,17 +181,6 @@ class WithdrawModalNew extends React.Component {
                 if (item.get("symbol") === fullFromAssetSymbol)
                     fromAsset = item;
             });
-
-            if (fromAsset && toAsset) {
-                // todo: when was this used and what is it good for?
-                // if (toAsset.get("precision") !== fromAsset.get("precision"))
-                //     toAsset = toAsset.set(
-                //         "precision",
-                //         fromAsset.get("precision")
-                //     );
-
-                MarketsActions.getMarketStats(toAsset, fromAsset, true);
-            }
         }
     }
 
@@ -1115,24 +1101,6 @@ class WithdrawModalNew extends React.Component {
                                 <label className="left-label">
                                     <Translate content="modal.withdraw.quantity" />
                                 </label>
-                                <ExchangeInput
-                                    value={quantity ? quantity : ""}
-                                    onChange={this.onQuantityChanged.bind(this)}
-                                    onFocus={onFocus}
-                                    onBlur={onBlur}
-                                    allowNaN={true}
-                                    placeholder={counterpart.translate(
-                                        "gateway.limit_withdraw_asset",
-                                        {
-                                            min: !minWithdraw ? 0 : minWithdraw,
-                                            max: !maxWithdraw
-                                                ? counterpart.translate(
-                                                      "gateway.limit_withdraw_asset_none"
-                                                  )
-                                                : maxWithdraw
-                                        }
-                                    )}
-                                />
                                 {canCoverWithdrawal &&
                                 minWithdraw &&
                                 quantity &&
@@ -1193,16 +1161,6 @@ class WithdrawModalNew extends React.Component {
                                 ) : null}
                             </div>
                         ) : null}
-
-                        {/*ESTIMATED VALUE*/}
-                        {/*
-                (assetAndGateway || quantity) && !isBTS ?
-                <div>
-                <label className="left-label"><Translate content="modal.withdraw.estimated_value" /> ({preferredCurrency})</label>
-                <ExchangeInput value={userEstimate != null ? userEstimate : estimatedValue} onChange={this.onEstimateChanged.bind(this)} onFocus={onFocus} onBlur={onBlur} />
-                </div> :
-                null
-            */}
 
                         {/*WITHDRAW ADDRESS*/}
                         {assetAndGateway && !isBTS ? (
@@ -1356,13 +1314,12 @@ const ConnectedWithdrawModal = connect(
     WithdrawModalNew,
     {
         listenTo() {
-            return [GatewayStore, AssetStore, SettingsStore, MarketsStore];
+            return [GatewayStore, AssetStore, SettingsStore];
         },
         getProps() {
             return {
                 backedCoins: GatewayStore.getState().backedCoins,
-                preferredCurrency: SettingsStore.getSetting("unit"),
-                marketStats: MarketsStore.getState().allMarketStats
+                preferredCurrency: SettingsStore.getSetting("unit")
             };
         }
     }

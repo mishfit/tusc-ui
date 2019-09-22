@@ -1,4 +1,4 @@
-import {Apis} from "bitsharesjs-ws";
+import {Apis} from "tuscjs-ws";
 /** This file centralized customization and branding efforts throughout the whole wallet and is meant to facilitate
  *  the process.
  *
@@ -79,12 +79,8 @@ export function getDefaultLogin() {
  *
  * @returns {[string,string,string,string,string,string]}
  */
-export function getUnits() {
-    if (_isTestnet()) {
-        return ["TEST"];
-    } else {
-        return ["BTS", "USD", "CNY", "BTC", "EUR", "GBP"];
-    }
+export function getUnits(chainId = "4018d784") {
+    return ["TUSC"];
 }
 
 /**
@@ -94,7 +90,7 @@ export function getUnits() {
  */
 
 export function getMyMarketsBases() {
-    return ["BTC", "ETH", "BTS", "USD", "CNY"];
+    return ["TUSC"];
 }
 
 /**
@@ -104,17 +100,7 @@ export function getMyMarketsBases() {
  */
 export function getMyMarketsQuotes() {
     let tokens = {
-        nativeTokens: [
-            "BTC",
-            "BTS",
-            "CNY",
-            "EUR",
-            "GOLD",
-            "KRW",
-            "RUBLE",
-            "SILVER",
-            "USD"
-        ],
+        nativeTokens: ["TUSC"],
         bridgeTokens: ["BRIDGE.BCO", "BRIDGE.BTC", "BRIDGE.MONA", "BRIDGE.ZNY"],
         gdexTokens: [
             "GDEX.BTC",

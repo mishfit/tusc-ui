@@ -7,8 +7,7 @@ import HelpContent from "../Utility/HelpContent";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import FormattedAsset from "../Utility/FormattedAsset";
-import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
-import {ChainStore, ChainTypes as grapheneChainTypes} from "bitsharesjs";
+import {ChainStore, ChainTypes as grapheneChainTypes} from "tuscjs";
 import {Card} from "bitshares-ui-style-guide";
 const {operations} = grapheneChainTypes;
 let ops = Object.keys(operations);
@@ -91,33 +90,13 @@ class FeeGroup extends React.Component {
                 ) : (
                     feeTypes["_none"]
                 );
-                let equivalentAmount = amount ? (
-                    <EquivalentValueComponent
-                        fromAsset="1.3.0"
-                        fullPrecision={true}
-                        amount={amount}
-                        toAsset={preferredUnit}
-                        fullDecimals={true}
-                    />
-                ) : (
-                    feeTypes["_none"]
-                );
+
                 let assetAmountLTM = amountForLTM ? (
                     <FormattedAsset amount={amountForLTM} asset="1.3.0" />
                 ) : (
                     feeTypes["_none"]
                 );
-                let equivalentAmountLTM = amountForLTM ? (
-                    <EquivalentValueComponent
-                        fromAsset="1.3.0"
-                        fullPrecision={true}
-                        amount={amountForLTM}
-                        toAsset={preferredUnit}
-                        fullDecimals={true}
-                    />
-                ) : (
-                    feeTypes["_none"]
-                );
+
                 let title = null;
 
                 if (!headIncluded) {
@@ -137,23 +116,9 @@ class FeeGroup extends React.Component {
                                 <td>{feeTypes[key]}</td>
                                 <td style={{textAlign: "right"}}>
                                     {assetAmount}
-                                    {amount !== 0 && preferredUnit !== "BTS" ? (
-                                        <span>
-                                            &nbsp;/&nbsp;
-                                            {equivalentAmount}
-                                        </span>
-                                    ) : null}
                                 </td>
                                 <td style={{textAlign: "right"}}>
                                     {feeIdx !== 8 ? assetAmountLTM : null}
-                                    {feeIdx !== 8 &&
-                                    amount !== 0 &&
-                                    preferredUnit !== "BTS" ? (
-                                        <span>
-                                            &nbsp;/&nbsp;
-                                            {equivalentAmountLTM}
-                                        </span>
-                                    ) : null}
                                 </td>
                             </tr>
                         );
