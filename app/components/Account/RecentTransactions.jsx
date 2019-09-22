@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 import PaginatedList from "../Utility/PaginatedList";
 const {operations} = grapheneChainTypes;
 const alignLeft = {textAlign: "left"};
-import report from "bitshares-report";
+import report from "tusc-report";
 import LoadingIndicator from "../LoadingIndicator";
 const ops = Object.keys(operations);
 

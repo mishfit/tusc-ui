@@ -8,13 +8,12 @@ matrix:
           osx_image: xcode8.3
 env:
     global:
-        - GITHUB_REPO: bitshares/bitshares-ui
-        - WALLET_REPO: bitshares/wallet.bitshares.org
-        - STAGING_REPO: bitshares/bitshares-ui-staging
-        - DEVELOP_REPO: bitshares/develop.bitshares.org
+        - GITHUB_REPO: tuscnetwork/tusc-ui
+        - WALLET_REPO: tuscnetwork/wallet.tusc.network
+        - STAGING_REPO: tuscnetwork/tusc-ui-staging
+        - DEVELOP_REPO: tuscnetwork/develop.tusc.network
         - CXX=g++-4.8
-        - secure:
-              "deD+B8xDM7cguX+PbeOSLh30mi6gHAdlqQphP63ZSCuFbL6hQU7MMb8nmBdBpIuaG2rX5GejSqPWTKt+/MSgQNHMTvRnzG1l1JtDTEAky8ssMyxI+HWiRe7Ic+1pFR0qUBAcPVN3MgPtW3Za47v1IyDyaR/0GdSREdy2KvmwBOWMoT23ubA1QlEhFO7uOlium4gJ6trxNPwfXkNHiMzanpVFyRQljY1PNGEPRzRzyWPNvZ4Pq5yNKnFFcW+afhvsTtK8AoeMFDeKhDF2yva8U0IMCZzrSKWwCIhkhJPii7pPT2LNlpjwVKXn16dRRVKO2tImmWtMpgbJjiNTRzVC4Y30+F7XPc97SpTKfGvoaH/iSZpTT1la0gHgoeBB32y6buPKnF7M2UNwTt2eGXpg/JHyperyQ25ey9EQBk/vHNxS9M3jcfkoXneBOnwICHgrzfamHxmMsiXnNDDriyPqIY9kFGQubqEF74cvBxhPLmfxJCPyHx7BY9ioiAlcgzWqJDOp/ADLjpoh44rUCpQH26Zg0N9efOuLUhuTAa54/9rboWZLxjxEvJ5qfTe+eHMW1r2RzoMJqWOhkbMs4f/qqGY42nqWhiibdSAZzIBuPYt/m9kdQ33930dKWoIkJwqZ2Il+T3FWJtzaguuoxKKYzsok9c/6FY7MbSSPaPw+fjg="
+        - secure: ""
 addons:
     apt:
         sources:
@@ -35,14 +34,13 @@ deploy:
     name: $TRAVIS_TAG
     body: Automated release from Travis CI with added files from AppVeyor build
     api_key:
-        secure:
-            "deD+B8xDM7cguX+PbeOSLh30mi6gHAdlqQphP63ZSCuFbL6hQU7MMb8nmBdBpIuaG2rX5GejSqPWTKt+/MSgQNHMTvRnzG1l1JtDTEAky8ssMyxI+HWiRe7Ic+1pFR0qUBAcPVN3MgPtW3Za47v1IyDyaR/0GdSREdy2KvmwBOWMoT23ubA1QlEhFO7uOlium4gJ6trxNPwfXkNHiMzanpVFyRQljY1PNGEPRzRzyWPNvZ4Pq5yNKnFFcW+afhvsTtK8AoeMFDeKhDF2yva8U0IMCZzrSKWwCIhkhJPii7pPT2LNlpjwVKXn16dRRVKO2tImmWtMpgbJjiNTRzVC4Y30+F7XPc97SpTKfGvoaH/iSZpTT1la0gHgoeBB32y6buPKnF7M2UNwTt2eGXpg/JHyperyQ25ey9EQBk/vHNxS9M3jcfkoXneBOnwICHgrzfamHxmMsiXnNDDriyPqIY9kFGQubqEF74cvBxhPLmfxJCPyHx7BY9ioiAlcgzWqJDOp/ADLjpoh44rUCpQH26Zg0N9efOuLUhuTAa54/9rboWZLxjxEvJ5qfTe+eHMW1r2RzoMJqWOhkbMs4f/qqGY42nqWhiibdSAZzIBuPYt/m9kdQ33930dKWoIkJwqZ2Il+T3FWJtzaguuoxKKYzsok9c/6FY7MbSSPaPw+fjg="
+        secure: ""
     file_glob: true
     file:
-        - build/binaries/BitShares*
+        - build/binaries/TUSC*
         - build/release-checksums-*
     skip_cleanup: true
     draft: true
     on:
-        repo: bitshares/bitshares-ui
+        repo: tuscnetwork/tusc-ui
         tags: true

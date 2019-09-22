@@ -1,14 +1,11 @@
 {
-    "name": "BitShares2-light",
+    "name": "TUSC-light",
     "version": "2.0.181129",
-    "description": "Advanced wallet interface for the BitShares financial blockchain.",
-    "homepage": "https://github.com/bitshares/bitshares-ui",
+    "description": "Advanced wallet interface for the TUSC blockchain.",
+    "homepage": "https://github.com/TUSCNetwork/tusc-ui",
     "author": "Sigve Kvalsvik <kvalsvik.crypto@gmail.com>",
     "contributors": [
-        "BitShares UI Worker",
-        "James Calfee",
-        "Dan Larimer",
-        "Valentine Zavgorodnev <valentine.zavgorodnev@gmail.com>"
+        "rarelycharles"
     ],
     "license": "MIT",
     "engines": {
@@ -18,7 +15,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/bitshares/bitshares-ui"
+        "url": "git://github.com/TUSCNetwork/tusc-ui"
     },
     "main": "build/electron/index.js",
     "scripts": {
@@ -84,8 +81,8 @@
     },
     "browsersList": "electron 1.7",
     "build": {
-        "productName": "BitShares",
-        "appId": "org.bitshares.graphene",
+        "productName": "TUSC",
+        "appId": "org.tusc",
         "files": [
             "build/electron",
             "!node_modules"
@@ -125,7 +122,7 @@
                 "AppImage",
                 "snap"
             ],
-            "synopsis": "BitShares: Cryptocurrency and Decentralized Exchange"
+            "synopsis": "TUSC: The Universal Settlement Coin"
         },
         "directories": {
             "buildResources": "resources",
@@ -137,9 +134,9 @@
         "alt-container": "git+https://github.com/bitshares/alt-container.git#cf4e2c690a54e49fc9fe2dc99ab8816e6c3e5a86",
         "alt-react": "git+https://github.com/bitshares/alt-react.git#d91addef51f58e41e9857ebb0dd9177cfbd3b583",
         "bignumber.js": "^4.0.0",
-        "bitshares-report": "^0.2.0",
+        "tusc-report": "^0.0.1",
         "bitshares-ui-style-guide": "git+https://github.com/bitshares/bitshares-ui-style-guide.git#8cd3ca9627c596de51ccc7724837868f3eb4c2ac",
-        "tuscjs": "~/dev/tuscjs",
+        "tuscjs": "^0.0.1",
         "browser-locale": "^1.0.3",
         "classnames": "^2.2.1",
         "cookies-js": "^1.2.1",
