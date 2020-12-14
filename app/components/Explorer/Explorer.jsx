@@ -10,6 +10,7 @@ import counterpart from "counterpart";
 import MarketsContainer from "../Exchange/MarketsContainer";
 import {Tabs} from "bitshares-ui-style-guide";
 import MetaTag from "../Layout/MetaTag";
+import HoldersContainer from "./HoldersContainer";
 
 class Explorer extends React.Component {
     constructor(props) {
@@ -52,6 +53,12 @@ class Explorer extends React.Component {
                     link: "/explorer/fees",
                     translate: "fees.title",
                     content: FeesContainer
+                },
+                {
+                    name: "holders",
+                    link: "/explorer/holders",
+                    translate: "holders.title",
+                    content: HoldersContainer
                 }
             ]
         };

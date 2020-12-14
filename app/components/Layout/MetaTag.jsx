@@ -11,8 +11,11 @@ class MetaTag extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
-        const metaTag = getMetaTag("blocks");
+        const {props: path} = this;
+
+        const metaTag = getMetaTag(path || "blocks");
         return (
             <div>
                 {metaTag && (
