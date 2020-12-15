@@ -83,6 +83,11 @@ export const xbtsxAPIs = {
     COINS_LIST: "/coin"
 };
 
+export const elasticSearchAPIs = {
+    BASE: "https://elasticsearch.tusc.network",
+    HOLDERS_LIST: "/all_asset_holders?asset_id=TUSC"
+};
+
 export const nodeRegions = [
     // region of the node follows roughly https://en.wikipedia.org/wiki/Subregion#/media/File:United_Nations_geographical_subregions.png
     "Northern Europe",

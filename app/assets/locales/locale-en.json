@@ -967,6 +967,9 @@
             "vesting_pay": "Salary vesting period (days)",
             "vesting_text": "The vesting period defines the number of days that worker earnings will vest before being fully claimable.",
             "website": "Website"
+        },
+        "holders": {
+            "title": "Holders"
         }
     },
     "fees": {

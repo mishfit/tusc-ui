@@ -1,5 +1,9 @@
 import ls from "./localStorage";
-import {blockTradesAPIs, openledgerAPIs} from "api/apiConfig";
+import {
+    blockTradesAPIs,
+    openledgerAPIs,
+    elasticSearchAPIs
+} from "api/apiConfig";
 import {availableGateways} from "common/gateways";
 const blockTradesStorage = new ls("");
 
@@ -511,3 +515,35 @@ export const WithdrawAddresses = {
     setLast: setLastWithdrawalAddress,
     getLast: getLastWithdrawalAddress
 };
+
+export function fetchHolders(
+    url = elasticSearchAPIs.BASE + elasticSearchAPIs.HOLDERS_LIST
+) {
+    const key = "fetchHolders_" + url;
+    let currentPromise = fetchInProgess[key];
+    if (fetchCache[key]) {
+        return Promise.resolve(fetchCache[key]);
+    } else if (!currentPromise) {
+        fetchInProgess[key] = currentPromise = fetch(url)
+            .then(reply =>
+                reply.json().then(result => {
+                    // throw new Error("Test");
+                    return result;
+                })
+            )
+            .catch(err => {
+                console.log(`fetchHolders error from ${url}: ${err}`);
+                throw err;
+            });
+    }
+    return new Promise((res, rej) => {
+        currentPromise
+            .then(result => {
+                fetchCache[key] = result;
+                res(result);
+                delete fetchInProgess[key];
+                if (!clearIntervals[key]) setCacheClearTimer(key);
+            })
+            .catch(rej);
+    });
+}

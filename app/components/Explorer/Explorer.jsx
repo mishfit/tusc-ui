@@ -57,7 +57,7 @@ class Explorer extends React.Component {
                 {
                     name: "holders",
                     link: "/explorer/holders",
-                    translate: "holders.title",
+                    translate: "explorer.holders.title",
                     content: HoldersContainer
                 }
             ]
