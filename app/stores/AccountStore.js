@@ -28,6 +28,7 @@ class AccountStore extends BaseStore {
             onSetCurrentAccount: AccountActions.setCurrentAccount,
             onCreateAccount: AccountActions.createAccount,
             onAccountSearch: AccountActions.accountSearch,
+            onHolderSearch: AccountActions.holderSearch,
             tryToSetCurrentAccount: AccountActions.tryToSetCurrentAccount,
             onSetPasswordAccount: AccountActions.setPasswordAccount,
             onChangeSetting: SettingsActions.changeSetting,
@@ -66,11 +67,13 @@ class AccountStore extends BaseStore {
             passwordAccount: null, // passwordAccount is the account used when logging in with cloud mode
             starredAccounts: Immutable.Map(), // starred accounts are 'active' accounts that can be selected using the right menu dropdown for trading/transfers etc
             searchAccounts: Immutable.Map(),
+            searchHolders: Immutable.Map(),
             accountContacts: Immutable.Set(),
             linkedAccounts: Immutable.Set(), // linkedAccounts are accounts for which the user controls the private keys, which are stored in a db with the wallet and automatically loaded every time the app starts
             referralAccount,
             passwordLogin: storedSettings.passwordLogin,
-            holders: []
+            holders: [],
+            isHoldersLoading: true
         };
 
         this.getMyAccounts = this.getMyAccounts.bind(this);
@@ -198,10 +201,13 @@ class AccountStore extends BaseStore {
                 ss.get(this._getStorageKey("hiddenAccounts", {wallet_name}), [])
             ),
             searchAccounts: Immutable.Map(),
+            searchHolders: Immutable.Map(),
             searchTerm: "",
+            searchHoldersTerm: "",
             wallet_name,
             starredAccounts,
-            accountContacts
+            accountContacts,
+            holders: []
         };
     }
 
@@ -579,6 +585,24 @@ class AccountStore extends BaseStore {
         });
     }
 
+    onHolderSearch(payload) {
+        this.state.searchHoldersTerm = payload.searchTerm;
+        this.state.searchHolders = this.state.searchHolders.clear();
+        const result = this.state.holders.filter(
+            holder =>
+                holder.name.toLowerCase().indexOf(start_symbol.toLowerCase()) >
+                -1
+        );
+
+        result.forEach(account => {
+            this.state.searchHolders = this.state.searchHolders.withMutations(
+                map => {
+                    map.set(account[1], account[0]);
+                }
+            );
+        });
+    }
+
     _getStorageKey(key = "currentAccount", state = this.state) {
         const wallet = state.wallet_name;
         const chainId = Apis.instance().chain_id;
@@ -754,7 +778,28 @@ class AccountStore extends BaseStore {
         }
     }
 
-    onFetchHolders() {}
+    onFetchHolders(payload) {
+        const state = this.state;
+
+        const topHolders = payload.holders
+            .sort((holderA, holderB) => {
+                const a = parseInt(holderA.amount);
+                const b = parseInt(holderB.amount);
+                return b - a;
+            })
+            .slice(0, 101)
+            .map((holder, idx) => {
+                return {
+                    rank: idx,
+                    accountId: holder.account_id,
+                    accountContacts: state.accountContacts,
+                    accountName: holder.name,
+                    accountBalance: holder.amount
+                };
+            });
+        state.holders = topHolders;
+        state.isHoldersLoading = false;
+    }
 }
 
 export default alt.createStore(AccountStore, "AccountStore");

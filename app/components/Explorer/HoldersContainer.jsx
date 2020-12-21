@@ -12,7 +12,13 @@ class HoldersContainer extends React.Component {
                         return AccountStore.getState().searchHolders;
                     },
                     searchTerm: () => {
-                        return AccountStore.getState().searchTerm;
+                        return AccountStore.getState().searchHoldersTerm;
+                    },
+                    holders: () => {
+                        return AccountStore.getState().holders;
+                    },
+                    isLoading: () => {
+                        return AccountStore.getState().isHoldersLoading;
                     }
                 }}
             >

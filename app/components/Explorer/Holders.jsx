@@ -13,45 +13,43 @@ import LoadingIndicator from "../LoadingIndicator";
 import {Table, Select, Icon as IconStyleGuide} from "bitshares-ui-style-guide";
 import SearchInput from "../Utility/SearchInput";
 import {ChainStore} from "tuscjs";
-import MetaTag from "../Layout/MetaTag";
 
 class Accounts extends React.Component {
     constructor(props) {
         super();
         this.state = {
             searchTerm: props.searchTerm,
-            isLoading: false,
             rowsOnPage: "25"
         };
 
-        this._searchAccounts = debounce(this._searchAccounts, 200);
+        this._searchHolders = debounce(this._searchHolders, 200);
         this.handleRowsChange = this.handleRowsChange.bind(this);
 
         this.balanceObjects = [];
     }
 
+    componentDidMount() {
+        GatewayActions.fetchHolders();
+    }
+
     shouldComponentUpdate(nextProps, nextState) {
         return (
-            !Immutable.is(
-                nextProps.searchAccounts,
-                this.props.searchAccounts
-            ) ||
+            !Immutable.is(nextProps.searchHolders, this.props.searchHolders) ||
+            nextProps.holders.length !== this.props.holders.length ||
             nextState.searchTerm !== this.state.searchTerm ||
-            nextState.isLoading !== this.state.isLoading
+            nextProps.isLoading !== this.props.isLoading
         );
     }
 
     _onSearchChange(e) {
         this.setState({
-            searchTerm: e.target.value.toLowerCase(),
-            isLoading: true
+            searchTerm: e.target.value.toLowerCase()
         });
-        this._searchAccounts(e.target.value);
+        this._searchHolders(e.target.value);
     }
 
-    _searchAccounts(searchTerm) {
-        AccountActions.accountSearch(searchTerm);
-        this.setState({isLoading: false});
+    _searchHolders(searchTerm) {
+        AccountActions.holderSearch(searchTerm);
     }
 
     _onAddContact(account, e) {
@@ -87,10 +85,10 @@ class Accounts extends React.Component {
     }
 
     render() {
-        let {searchAccounts} = this.props;
+        let {searchHolders, holders} = this.props;
         let {searchTerm} = this.state;
 
-        let dataSource = [];
+        let dataSource = holders;
         let columns = [];
 
         columns = [
@@ -223,8 +221,8 @@ class Accounts extends React.Component {
             }
         ];
 
-        if (searchAccounts.size > 0 && searchTerm && searchTerm.length > 0) {
-            searchAccounts
+        if (searchHolders.size > 0 && searchTerm && searchTerm.length > 0) {
+            dataSource = searchHolders
                 .filter(a => {
                     /*
                      * This appears to return false negatives, perhaps from
@@ -254,19 +252,18 @@ class Accounts extends React.Component {
                         ? currentAccount.getIn(["balances", "1.3.0"]) || null
                         : null;
 
-                    dataSource.push({
+                    return {
                         accountId: id,
                         accountContacts: AccountStore.getState()
                             .accountContacts,
                         accountName: name,
                         accountBalance: balance
-                    });
+                    };
                 });
         }
 
         return (
             <div className="grid-block vertical">
-                <MetaTag path="explorer/accounts" />
                 <div className="grid-block vertical">
                     <div className="grid-block main-content small-12 medium-10 medium-offset-1 main-content vertical">
                         <div className="generic-bordered-box">
@@ -328,7 +325,7 @@ class Accounts extends React.Component {
                                     pageSize: Number(this.state.rowsOnPage)
                                 }}
                             />
-                            {this.state.isLoading ? (
+                            {this.props.isLoading ? (
                                 <div style={{textAlign: "center", padding: 10}}>
                                     <LoadingIndicator type="three-bounce" />
                                 </div>
@@ -342,11 +339,11 @@ class Accounts extends React.Component {
 }
 
 Accounts.defaultProps = {
-    searchAccounts: {}
+    searchHolders: {}
 };
 
 Accounts.propTypes = {
-    searchAccounts: PropTypes.object.isRequired
+    searchHolders: PropTypes.object.isRequired
 };
 
 export default Accounts;

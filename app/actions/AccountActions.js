@@ -36,6 +36,17 @@ class AccountActions {
     }
 
     /**
+     * Holder search results are managed by the AccountStore.
+     */
+    holderSearch(start_symbol) {
+        return dispatch => {
+            return dispatch({
+                searchTerm: start_symbol
+            });
+        };
+    }
+
+    /**
      *  TODO:  The concept of current accounts is deprecated and needs to be removed
      */
     setCurrentAccount(name) {
