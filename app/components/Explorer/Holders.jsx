@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import Immutable from "immutable";
 import Translate from "react-translate-component";
 import AccountActions from "actions/AccountActions";
+import GatewayActions from "actions/GatewayActions";
 import {debounce} from "lodash-es";
 import Icon from "../Icon/Icon";
 import BalanceComponent from "../Utility/BalanceComponent";
@@ -95,17 +96,16 @@ class Accounts extends React.Component {
         columns = [
             {
                 title: (
-                    <Translate component="span" content="explorer.assets.id" />
+                    <Translate
+                        component="span"
+                        content="explorer.holders.rank"
+                    />
                 ),
-                dataIndex: "accountId",
-                key: "accountId",
+                dataIndex: "rank",
+                key: "rank",
                 defaultSortOrder: "ascend",
                 sorter: (a, b) => {
-                    return a.accountId > b.accountId
-                        ? 1
-                        : a.accountId < b.accountId
-                        ? -1
-                        : 0;
+                    return a.rank > b.rank ? 1 : a.rank < b.rank ? -1 : 0;
                 },
                 render: id => {
                     return <div>{id}</div>;

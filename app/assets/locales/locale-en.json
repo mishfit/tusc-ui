@@ -969,7 +969,8 @@
             "website": "Website"
         },
         "holders": {
-            "title": "Holders"
+            "title": "Holders",
+            "rank": "Rank"
         }
     },
     "fees": {

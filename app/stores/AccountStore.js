@@ -2,6 +2,7 @@ import BaseStore from "./BaseStore";
 import Immutable from "immutable";
 import alt from "alt-instance";
 import AccountActions from "actions/AccountActions";
+import GatewayActions from "actions/GatewayActions";
 import SettingsActions from "actions/SettingsActions";
 import WalletActions from "actions/WalletActions";
 import iDB from "idb-instance";
@@ -35,8 +36,9 @@ class AccountStore extends BaseStore {
             onRemoveStarAccount: AccountActions.removeStarAccount,
             onAddAccountContact: AccountActions.addAccountContact,
             onRemoveAccountContact: AccountActions.removeAccountContact,
-            onToggleHideAccount: AccountActions.toggleHideAccount
+            onToggleHideAccount: AccountActions.toggleHideAccount,
             // onNewPrivateKeys: [ PrivateKeyActions.loadDbData, PrivateKeyActions.addKey ]
+            onFetchHolders: GatewayActions.fetchHolders
         });
 
         this._export(
@@ -67,7 +69,8 @@ class AccountStore extends BaseStore {
             accountContacts: Immutable.Set(),
             linkedAccounts: Immutable.Set(), // linkedAccounts are accounts for which the user controls the private keys, which are stored in a db with the wallet and automatically loaded every time the app starts
             referralAccount,
-            passwordLogin: storedSettings.passwordLogin
+            passwordLogin: storedSettings.passwordLogin,
+            holders: []
         };
 
         this.getMyAccounts = this.getMyAccounts.bind(this);
@@ -750,6 +753,8 @@ class AccountStore extends BaseStore {
             this.setState({passwordLogin: payload.value});
         }
     }
+
+    onFetchHolders() {}
 }
 
 export default alt.createStore(AccountStore, "AccountStore");
