@@ -39,7 +39,8 @@ class AccountStore extends BaseStore {
             onRemoveAccountContact: AccountActions.removeAccountContact,
             onToggleHideAccount: AccountActions.toggleHideAccount,
             // onNewPrivateKeys: [ PrivateKeyActions.loadDbData, PrivateKeyActions.addKey ]
-            onFetchHolders: GatewayActions.fetchHolders
+            onFetchHolders: GatewayActions.fetchHolders,
+            onFetchSupply: GatewayActions.fetchSupply
         });
 
         this._export(
@@ -73,7 +74,9 @@ class AccountStore extends BaseStore {
             referralAccount,
             passwordLogin: storedSettings.passwordLogin,
             holders: [],
-            isHoldersLoading: true
+            isHoldersLoading: true,
+            circulatingSupply: 0,
+            isCirculatingSupplyLoading: true
         };
 
         this.getMyAccounts = this.getMyAccounts.bind(this);
@@ -207,7 +210,8 @@ class AccountStore extends BaseStore {
             wallet_name,
             starredAccounts,
             accountContacts,
-            holders: []
+            holders: [],
+            circulatingSupply: 0
         };
     }
 
@@ -789,16 +793,30 @@ class AccountStore extends BaseStore {
             })
             .slice(0, 101)
             .map((holder, idx) => {
+                const accountBalance = parseInt(holder.amount) / 5;
                 return {
                     rank: idx,
                     accountId: holder.account_id,
                     accountContacts: state.accountContacts,
                     accountName: holder.name,
-                    accountBalance: holder.amount
+                    accountBalance: accountBalance,
+                    accountBalancePercentage:
+                        state.circulatingSupply === 0
+                            ? null
+                            : accountBalance / state.circulatingSupply
                 };
             });
         state.holders = topHolders;
         state.isHoldersLoading = false;
+    }
+
+    onFetchSupply(payload) {
+        const state = this.state;
+
+        const circulatingSupply = payload.circulatingSupply;
+
+        state.circulatingSupply = circulatingSupply;
+        state.isCirculatingSupplyLoading = false;
     }
 }
 

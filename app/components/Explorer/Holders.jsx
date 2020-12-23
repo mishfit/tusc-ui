@@ -29,6 +29,7 @@ class Accounts extends React.Component {
     }
 
     componentDidMount() {
+        GatewayActions.fetchSupply();
         GatewayActions.fetchHolders();
     }
 
@@ -165,57 +166,34 @@ class Accounts extends React.Component {
                 dataIndex: "accountBalance",
                 key: "accountBalance",
                 sorter: (a, b) => {
-                    this._ensureBalanceObject(a.accountBalance);
-                    this._ensureBalanceObject(b.accountBalance);
-
-                    return this.balanceObjects[a.accountBalance] >
-                        this.balanceObjects[b.accountBalance]
+                    return a.accountBalance > b.accountBalance
                         ? 1
-                        : this.balanceObjects[a.accountBalance] <
-                          this.balanceObjects[b.accountBalance]
+                        : a.accountBalance < b.accountBalance
                         ? -1
                         : 0;
                 },
                 render: balance => {
                     return (
-                        <div>
-                            {!balance ? (
-                                "n/a"
-                            ) : (
-                                <BalanceComponent balance={balance} />
-                            )}
-                        </div>
+                        <div>{!balance ? "n/a" : <span>{balance}</span>}</div>
                     );
                 }
             },
             {
                 title: <Translate component="span" content="account.percent" />,
-                dataIndex: "accountBalance",
+                dataIndex: "accountBalancePercentage",
                 key: "accountBalancePercentage",
                 sorter: (a, b) => {
-                    this._ensureBalanceObject(a.accountBalance);
-                    this._ensureBalanceObject(b.accountBalance);
-
-                    return this.balanceObjects[a.accountBalance] >
-                        this.balanceObjects[b.accountBalance]
+                    return a.accountBalancePercentage >
+                        b.accountBalancePercentage
                         ? 1
-                        : this.balanceObjects[a.accountBalance] <
-                          this.balanceObjects[b.accountBalance]
+                        : a.accountBalancePercentage <
+                          b.accountBalancePercentage
                         ? -1
                         : 0;
                 },
                 render: balance => {
                     return (
-                        <div>
-                            {!balance ? (
-                                "n/a"
-                            ) : (
-                                <BalanceComponent
-                                    balance={balance}
-                                    asPercentage={true}
-                                />
-                            )}
-                        </div>
+                        <div>{!balance ? "n/a" : <span>{balance}</span>}</div>
                     );
                 }
             }
@@ -257,7 +235,8 @@ class Accounts extends React.Component {
                         accountContacts: AccountStore.getState()
                             .accountContacts,
                         accountName: name,
-                        accountBalance: balance
+                        accountBalance: balance,
+                        accountBalancePercentage: null
                     };
                 });
         }
