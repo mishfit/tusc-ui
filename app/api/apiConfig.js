@@ -32,7 +32,7 @@ export const bitsparkAPIs = {
     COINS_LIST: "/coins",
     ACTIVE_WALLETS: "/active-wallets",
     TRADING_PAIRS: "/trading-pairs",
-    DEPOSIT_LIMIT: "/deposit-limits",
+    DEPOSIT_LIMIT: "/depositlimits",
     ESTIMATE_OUTPUT: "/estimate-output-amount",
     ESTIMATE_INPUT: "/estimate-input-amount"
 };
@@ -85,7 +85,8 @@ export const xbtsxAPIs = {
 
 export const elasticSearchAPIs = {
     BASE: "https://elasticsearch.tusc.network",
-    HOLDERS_LIST: "/all_asset_holders?asset_id=TUSC"
+    HOLDERS_LIST: "/all_asset_holders?asset_id=TUSC",
+    CIRCULATING_SUPPLY: "/circulating_supply?object=2.3.0"
 };
 
 export const nodeRegions = [

@@ -547,3 +547,35 @@ export function fetchHolders(
             .catch(rej);
     });
 }
+
+export function fetchSupply(
+    url = elasticSearchAPIs.BASE + elasticSearchAPIs.CIRCULATING_SUPPLY
+) {
+    const key = "fetchSupply_" + url;
+    let currentPromise = fetchInProgess[key];
+    if (fetchCache[key]) {
+        return Promise.resolve(fetchCache[key]);
+    } else if (!currentPromise) {
+        fetchInProgess[key] = currentPromise = fetch(url)
+            .then(reply =>
+                reply.json().then(result => {
+                    // throw new Error("Test");
+                    return result;
+                })
+            )
+            .catch(err => {
+                console.log(`fetchSupply error from ${url}: ${err}`);
+                throw err;
+            });
+    }
+    return new Promise((res, rej) => {
+        currentPromise
+            .then(result => {
+                fetchCache[key] = result;
+                res(result);
+                delete fetchInProgess[key];
+                if (!clearIntervals[key]) setCacheClearTimer(key);
+            })
+            .catch(rej);
+    });
+}

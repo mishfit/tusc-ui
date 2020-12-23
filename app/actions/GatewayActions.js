@@ -5,7 +5,8 @@ import {
     fetchCoinsSimple,
     getBackedCoins,
     getActiveWallets,
-    fetchHolders
+    fetchHolders,
+    fetchSupply
 } from "common/gatewayMethods";
 import {blockTradesAPIs} from "api/apiConfig";
 
@@ -161,6 +162,32 @@ class GatewayActions {
                     })
                     .catch(() => {
                         delete inProgress["fetchHolders"];
+                        dispatch({
+                            holders: []
+                        });
+                    });
+            };
+        } else {
+            return {};
+        }
+    }
+
+    fetchSupply() {
+        if (!inProgress["fetchSupply"]) {
+            inProgress["fetchSupply"] = true;
+            return dispatch => {
+                let fetchSupplyTimeout = setTimeout(
+                    onGatewayTimeout.bind(null, dispatch, "SUPPLY"),
+                    GATEWAY_TIMEOUT
+                );
+                fetchSupply()
+                    .then(result => {
+                        clearTimeout(fetchSupplyTimeout);
+                        delete inProgress["fetchSupply"];
+                        dispatch({holders: result});
+                    })
+                    .catch(() => {
+                        delete inProgress["fetchSupply"];
                         dispatch({
                             holders: []
                         });
