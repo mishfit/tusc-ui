@@ -14,7 +14,7 @@ import CreateAccount from "./Account/CreateAccount";
 import CreateAccountPassword from "./Account/CreateAccountPassword";
 import {Route} from "react-router-dom";
 import {getWalletName, getLogo, getAllowedLogins} from "branding";
-import {Select, Row, Col, Icon} from "bitshares-ui-style-guide";
+import {Select, Row, Col, Icon} from "tusc-ui-style-guide";
 var logo = getLogo();
 
 const FlagImage = ({flag, width = 50, height = 50}) => {

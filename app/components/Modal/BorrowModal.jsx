@@ -10,7 +10,7 @@ import WalletDb from "stores/WalletDb";
 import counterpart from "counterpart";
 import Immutable from "immutable";
 import {List} from "immutable";
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Modal, Button} from "tusc-ui-style-guide";
 import asset_utils from "../../lib/common/asset_utils";
 import {BorrowModalView} from "./View/BorrowModalView";
 import debounceRender from "react-debounce-render";

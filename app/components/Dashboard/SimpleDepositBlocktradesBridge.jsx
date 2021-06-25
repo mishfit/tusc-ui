@@ -28,7 +28,7 @@ import {
     Tooltip,
     Input,
     Select
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 
 class SimpleDepositBlocktradesBridge extends React.Component {
     static propTypes = {

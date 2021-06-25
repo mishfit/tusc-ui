@@ -1,7 +1,7 @@
 import React, {Fragment, PureComponent} from "react";
 import PropTypes from "prop-types";
 import counterpart from "counterpart";
-import {Form, Input, Button} from "bitshares-ui-style-guide";
+import {Form, Input, Button} from "tusc-ui-style-guide";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import Translate from "react-translate-component";

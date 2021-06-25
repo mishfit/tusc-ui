@@ -4,7 +4,7 @@ import Immutable from "immutable";
 import cname from "classnames";
 import PropTypes from "prop-types";
 import counterpart from "counterpart";
-import {Form} from "bitshares-ui-style-guide";
+import {Form} from "tusc-ui-style-guide";
 
 const FormItem = Form.Item;
 

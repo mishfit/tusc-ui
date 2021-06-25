@@ -11,7 +11,7 @@ import PriceText from "../Utility/PriceText";
 import TransitionWrapper from "../Utility/TransitionWrapper";
 import AssetName from "../Utility/AssetName";
 import Icon from "../Icon/Icon";
-import {Select, Icon as AntIcon, Tooltip} from "bitshares-ui-style-guide";
+import {Select, Icon as AntIcon, Tooltip} from "tusc-ui-style-guide";
 
 /**
  * @array: orderRows

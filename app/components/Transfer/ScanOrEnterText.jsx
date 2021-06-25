@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Input} from "bitshares-ui-style-guide";
+import {Input} from "tusc-ui-style-guide";
 import QRScanner from "../QRAddressScanner";
 
 export default function ScanOrEnterText({

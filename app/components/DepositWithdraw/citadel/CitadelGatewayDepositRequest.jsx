@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs/es";
+import {ChainStore} from "tuscjs/es";
 import ChainTypes from "components/Utility/ChainTypes";
 import BindToChainState from "components/Utility/BindToChainState";
 import WithdrawModalCitadel from "./WithdrawModalCitadel";
@@ -14,7 +14,7 @@ import LoadingIndicator from "components/LoadingIndicator";
 import DisableCopyText from "../DisableCopyText";
 import counterpart from "counterpart";
 import PropTypes from "prop-types";
-import {Modal} from "bitshares-ui-style-guide";
+import {Modal} from "tusc-ui-style-guide";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 class CitadelGatewayDepositRequest extends React.Component {

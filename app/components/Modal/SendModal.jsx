@@ -1,7 +1,7 @@
 import React from "react";
 import ZfApi from "react-foundation-apps/src/utils/foundation-api";
 import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import AmountSelector from "../Utility/AmountSelectorStyleGuide";
 import FeeAssetSelector from "../Utility/FeeAssetSelector";
 import AccountStore from "stores/AccountStore";
@@ -16,7 +16,7 @@ import utils from "common/utils";
 import counterpart from "counterpart";
 import {connect} from "alt-react";
 import {getWalletName} from "branding";
-import {Form, Modal, Button, Tooltip, Input} from "bitshares-ui-style-guide";
+import {Form, Modal, Button, Tooltip, Input} from "tusc-ui-style-guide";
 
 const EqualWidthContainer = ({children}) => (
     <div

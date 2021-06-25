@@ -12,8 +12,8 @@ import HelpContent from "../Utility/HelpContent";
 import assetUtils from "common/asset_utils";
 import utils from "common/utils";
 import FormattedTime from "../Utility/FormattedTime";
-import {ChainStore} from "bitsharesjs";
-import {Apis} from "bitsharesjs-ws";
+import {ChainStore} from "tuscjs";
+import {Apis} from "tuscjs-ws";
 import {CallOrder, CollateralBid, FeedPrice} from "common/MarketClasses";
 import Page404 from "../Page404/Page404";
 import FeePoolOperation from "../Account/FeePoolOperation";
@@ -24,7 +24,7 @@ import AssetOwnerUpdate from "./AssetOwnerUpdate";
 import AssetPublishFeed from "./AssetPublishFeed";
 import AssetResolvePrediction from "./AssetResolvePrediction";
 import BidCollateralOperation from "./BidCollateralOperation";
-import {Tooltip, Icon, Table, Tabs, Collapse} from "bitshares-ui-style-guide";
+import {Tooltip, Icon, Table, Tabs, Collapse} from "tusc-ui-style-guide";
 const {Panel} = Collapse;
 
 class AssetFlag extends React.Component {

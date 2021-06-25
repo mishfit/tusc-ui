@@ -5,7 +5,7 @@ import BlockchainStore from "stores/BlockchainStore";
 import BlockchainActions from "actions/BlockchainActions";
 import ReactTooltip from "react-tooltip";
 import getLocale from "browser-locale";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 
 /**
  * @brief displays block's date and time based on block number

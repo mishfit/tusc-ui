@@ -6,7 +6,7 @@ import {
     Button,
     Icon,
     Select
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import {Link} from "react-router-dom";
 import AssetName from "../Utility/AssetName";
 import {PRICE_ALERT_TYPES} from "../../services/Exchange";

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {connect} from "alt-react";
-import {PrivateKey} from "bitsharesjs/es";
+import {PrivateKey} from "tuscjs/es";
 import WalletManagerStore from "stores/WalletManagerStore";
 import BackupStore from "stores/BackupStore";
 import AccountStore from "stores/AccountStore";
@@ -11,7 +11,7 @@ import WalletUnlockActions from "actions/WalletUnlockActions";
 import BackupActions, {restore} from "actions/BackupActions";
 import SettingsActions from "actions/SettingsActions";
 import Icon from "../Icon/Icon";
-import {Button, Form, Input, Notification} from "bitshares-ui-style-guide";
+import {Button, Form, Input, Notification} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 class DecryptBackup extends Component {

@@ -5,7 +5,7 @@ import BindToChainState from "../Utility/BindToChainState";
 import cnames from "classnames";
 import counterpart from "counterpart";
 import Translate from "react-translate-component";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 import asset_utils from "../../lib/common/asset_utils";
 
 class MarginPosition extends React.Component {

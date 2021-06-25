@@ -6,7 +6,7 @@ import BindToChainState from "../Utility/BindToChainState";
 import AssetName from "../Utility/AssetName";
 import BorrowModal from "../Modal/BorrowModal";
 import WalletApi from "api/WalletApi";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import WalletDb from "stores/WalletDb";
 import utils from "common/utils";
 import counterpart from "counterpart";
@@ -14,7 +14,7 @@ import Icon from "../Icon/Icon";
 import TotalBalanceValue from "../Utility/TotalBalanceValue";
 import {List} from "immutable";
 import {Link} from "react-router-dom";
-import {Tooltip, Icon as AntIcon} from "bitshares-ui-style-guide";
+import {Tooltip, Icon as AntIcon} from "tusc-ui-style-guide";
 import asset_utils from "../../lib/common/asset_utils";
 
 const alignRight = {textAlign: "right"};

@@ -7,7 +7,7 @@ import Icon from "../Icon/Icon";
 import MarketsActions from "actions/MarketsActions";
 import SettingsActions from "actions/SettingsActions";
 import {withRouter} from "react-router-dom";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 
 class MarketRow extends React.Component {
     static defaultProps = {

@@ -7,7 +7,7 @@ import {Tabs, Tab} from "../Utility/Tabs";
 import counterpart from "counterpart";
 import SignedMessageAction from "../../actions/SignedMessageAction";
 import SignedMessage from "../Account/SignedMessage";
-import {Switch} from "bitshares-ui-style-guide";
+import {Switch} from "tusc-ui-style-guide";
 
 /** This component gives a user interface for signing and verifying messages with the bitShares memo key.
  *  It consists of two tabs:

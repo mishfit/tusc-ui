@@ -3,7 +3,7 @@ import Immutable from "immutable";
 import cname from "classnames";
 import PropTypes from "prop-types";
 import counterpart from "counterpart";
-import {Form, Input} from "bitshares-ui-style-guide";
+import {Form, Input} from "tusc-ui-style-guide";
 
 const FormItem = Form.Item;
 

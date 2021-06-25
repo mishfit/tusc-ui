@@ -1,5 +1,5 @@
 import {connect} from "alt-react";
-import {ChainValidation} from "bitsharesjs";
+import {ChainValidation} from "tuscjs";
 import counterpart from "counterpart";
 import {debounce} from "lodash-es";
 import React, {Component} from "react";
@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 import AssetActions from "actions/AssetActions";
 import utils from "common/utils";
 import AssetStore from "stores/AssetStore";
-import {Form, Input, Modal, Icon as AntIcon} from "bitshares-ui-style-guide";
+import {Form, Input, Modal, Icon as AntIcon} from "tusc-ui-style-guide";
 import AssetName from "../Utility/AssetName";
 import {
     lookupAssets,

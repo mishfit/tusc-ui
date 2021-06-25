@@ -15,7 +15,7 @@ import {
     Icon,
     Row,
     Col
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import asset_utils from "../../../lib/common/asset_utils";
 
 export function BorrowModalView({

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon/Icon";
 import Translate from "react-translate-component";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 
 export default class Showcase extends Component {
     static propTypes = {

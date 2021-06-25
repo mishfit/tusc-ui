@@ -4,7 +4,7 @@ import counterpart from "counterpart";
 import AssetWrapper from "./AssetWrapper";
 import PropTypes from "prop-types";
 import {DecimalChecker} from "./DecimalChecker";
-import {Form, Input, Icon} from "bitshares-ui-style-guide";
+import {Form, Input, Icon} from "tusc-ui-style-guide";
 import AssetSelect from "./AssetSelect";
 
 class AmountSelector extends DecimalChecker {

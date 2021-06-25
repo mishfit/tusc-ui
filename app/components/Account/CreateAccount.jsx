@@ -13,7 +13,7 @@ import TransactionConfirmStore from "stores/TransactionConfirmStore";
 import LoadingIndicator from "../LoadingIndicator";
 import WalletActions from "actions/WalletActions";
 import Translate from "react-translate-component";
-import {ChainStore, FetchChain} from "bitsharesjs";
+import {ChainStore, FetchChain} from "tuscjs";
 import {BackupCreate} from "../Wallet/Backup";
 import ReactTooltip from "react-tooltip";
 import utils from "common/utils";
@@ -22,7 +22,7 @@ import counterpart from "counterpart";
 import {withRouter} from "react-router-dom";
 import {scroller} from "react-scroll";
 import {getWalletName} from "branding";
-import {Notification} from "bitshares-ui-style-guide";
+import {Notification} from "tusc-ui-style-guide";
 
 class CreateAccount extends React.Component {
     constructor() {

@@ -3,7 +3,7 @@ import {BackupCreate} from "../Wallet/Backup";
 import BackupBrainkey from "../Wallet/BackupBrainkey";
 import counterpart from "counterpart";
 import BackupFavorites from "./BackupFavorites";
-import {Select} from "bitshares-ui-style-guide";
+import {Select} from "tusc-ui-style-guide";
 
 const Option = Select.Option;
 

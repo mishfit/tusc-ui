@@ -6,7 +6,7 @@ import TransitionWrapper from "../../Utility/TransitionWrapper";
 import AssetName from "../../Utility/AssetName";
 import BlockDate from "../../Utility/BlockDate";
 import PriceText from "../../Utility/PriceText";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 import getLocale from "browser-locale";
 
 function MarketHistoryViewRow({fill, base, quote}) {

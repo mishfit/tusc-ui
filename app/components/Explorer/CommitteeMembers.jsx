@@ -3,12 +3,12 @@ import React from "react";
 import Immutable from "immutable";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import {connect} from "alt-react";
 import SettingsActions from "actions/SettingsActions";
 import FormattedAsset from "../Utility/FormattedAsset";
 import SettingsStore from "stores/SettingsStore";
-import {Table} from "bitshares-ui-style-guide";
+import {Table} from "tusc-ui-style-guide";
 import SearchInput from "../Utility/SearchInput";
 import utils from "common/utils";
 

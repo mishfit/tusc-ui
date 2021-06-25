@@ -4,7 +4,7 @@ import AssetName from "../Utility/AssetName";
 import utils from "common/utils";
 import cnames from "classnames";
 import ReactTooltip from "react-tooltip";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 
 export default class PriceStatWithLabel extends React.Component {
     constructor() {

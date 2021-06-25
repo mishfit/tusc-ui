@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Translate from "react-translate-component";
-import {Button} from "bitshares-ui-style-guide";
+import {Button} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 export default function AccountBlockSelection(props) {

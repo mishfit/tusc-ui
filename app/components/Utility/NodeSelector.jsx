@@ -6,7 +6,7 @@ import {connect} from "alt-react";
 import SettingsStore from "../../stores/SettingsStore";
 import SettingsActions from "../../actions/SettingsActions";
 import counterpart from "counterpart";
-import {Icon as AntIcon, Icon, Tooltip} from "bitshares-ui-style-guide";
+import {Icon as AntIcon, Icon, Tooltip} from "tusc-ui-style-guide";
 
 const {SHOW_PARENT} = TreeSelect;
 

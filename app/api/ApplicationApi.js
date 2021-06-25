@@ -8,9 +8,9 @@ import {
     TransactionHelper,
     FetchChain,
     ChainStore
-} from "bitsharesjs";
+} from "tuscjs";
 import counterpart from "counterpart";
-import {Notification} from "bitshares-ui-style-guide";
+import {Notification} from "tusc-ui-style-guide";
 
 const ApplicationApi = {
     create_account(

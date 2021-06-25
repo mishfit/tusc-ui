@@ -12,7 +12,7 @@ import {
     Button,
     Switch,
     Tooltip
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import SellReceive from "components/QuickTrade/SellReceive";
 import MarketsActions from "actions/MarketsActions";
 import {
@@ -21,15 +21,15 @@ import {
     getOrders,
     getFees
 } from "./QuickTradeHelper";
-import {ChainStore, FetchChain} from "bitsharesjs";
+import {ChainStore, FetchChain} from "tuscjs";
 import {debounce} from "lodash-es";
 import AssetActions from "actions/AssetActions";
-import {ChainValidation} from "bitsharesjs";
+import {ChainValidation} from "tuscjs";
 import {lookupAssets} from "../Exchange/MarketPickerHelpers";
 import counterpart from "counterpart";
 import LinkToAccountById from "../Utility/LinkToAccountById";
 import {Asset, LimitOrderCreate} from "common/MarketClasses";
-import {Notification} from "bitshares-ui-style-guide";
+import {Notification} from "tusc-ui-style-guide";
 import FormattedPrice from "../Utility/FormattedPrice";
 import AssetName from "../Utility/AssetName";
 import Translate from "react-translate-component";

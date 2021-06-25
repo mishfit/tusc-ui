@@ -13,7 +13,7 @@ import {
     Input,
     Icon as AntIcon,
     Button
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import SearchInput from "../../Utility/SearchInput";
 
 export default class Workers extends React.Component {

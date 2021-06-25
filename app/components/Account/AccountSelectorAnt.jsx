@@ -3,7 +3,7 @@ import utils from "common/utils";
 import {connect} from "alt-react";
 import AccountStore from "stores/AccountStore";
 import AccountActions from "actions/AccountActions";
-import {ChainStore, PublicKey, ChainValidation, FetchChain} from "bitsharesjs";
+import {ChainStore, PublicKey, ChainValidation, FetchChain} from "tuscjs";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import classnames from "classnames";
@@ -11,7 +11,7 @@ import counterpart from "counterpart";
 import Icon from "../Icon/Icon";
 import accountUtils from "common/account_utils";
 import PropTypes from "prop-types";
-import {Form, Input, Tooltip} from "bitshares-ui-style-guide";
+import {Form, Input, Tooltip} from "tusc-ui-style-guide";
 
 /**
  * @brief Allows the user to enter an account by name or #ID

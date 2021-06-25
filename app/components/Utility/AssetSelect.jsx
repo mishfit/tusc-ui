@@ -1,7 +1,7 @@
 import React from "react";
 import Translate from "react-translate-component";
 import PropTypes from "prop-types";
-import {Form, Select} from "bitshares-ui-style-guide";
+import {Form, Select} from "tusc-ui-style-guide";
 import utils from "common/utils";
 import counterpart from "counterpart";
 import ChainTypes from "../Utility/ChainTypes";

@@ -3,7 +3,7 @@ import Trigger from "react-foundation-apps/src/trigger";
 import Translate from "react-translate-component";
 import {getWalletName} from "branding";
 import counterpart from "counterpart";
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Modal, Button} from "tusc-ui-style-guide";
 
 export default class BrowserSupportModal extends React.Component {
     _openLink() {

@@ -6,10 +6,10 @@ import MarketsActions from "actions/MarketsActions";
 import Translate from "react-translate-component";
 import TransitionWrapper from "../Utility/TransitionWrapper";
 import SettingsActions from "actions/SettingsActions";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import {LimitOrder, CallOrder} from "common/MarketClasses";
 import ReactTooltip from "react-tooltip";
-import {Button} from "bitshares-ui-style-guide";
+import {Button} from "tusc-ui-style-guide";
 import {MarketsOrderView, MarketOrdersRowView} from "./View/MarketOrdersView";
 
 class MarketOrdersRow extends React.Component {

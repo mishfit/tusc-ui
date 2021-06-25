@@ -5,7 +5,7 @@ import Translate from "react-translate-component";
 import LoadingIndicator from "./LoadingIndicator";
 import utils from "common/utils";
 
-const query = {tag: "bitshares.fdn", limit: 20};
+const query = {tag: "tusc.fdn", limit: 20};
 
 const alignRight = {textAlign: "right"};
 const alignLeft = {textAlign: "left"};

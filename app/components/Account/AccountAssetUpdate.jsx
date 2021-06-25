@@ -4,7 +4,7 @@ import classnames from "classnames";
 import AssetActions from "actions/AssetActions";
 import HelpContent from "../Utility/HelpContent";
 import utils from "common/utils";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import FormattedFee from "../Utility/FormattedFee";
 import counterpart from "counterpart";
 import ChainTypes from "../Utility/ChainTypes";
@@ -28,7 +28,7 @@ import {
     Notification,
     Switch,
     Tooltip
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import Immutable from "immutable";
 
 let GRAPHENE_MAX_SHARE_SUPPLY = new big(

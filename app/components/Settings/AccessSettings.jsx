@@ -8,7 +8,7 @@ import {connect} from "alt-react";
 import cnames from "classnames";
 import Icon from "../Icon/Icon";
 import LoadingButton from "../Utility/LoadingButton";
-import {Switch, Button} from "bitshares-ui-style-guide";
+import {Switch, Button} from "tusc-ui-style-guide";
 import NodeSelector from "../Utility/NodeSelector";
 
 const autoSelectionUrl = "wss://fake.automatic-selection.com";

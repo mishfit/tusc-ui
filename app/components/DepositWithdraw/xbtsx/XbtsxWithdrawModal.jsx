@@ -10,11 +10,11 @@ import AccountActions from "actions/AccountActions";
 import {validateAddress, WithdrawAddresses} from "common/XbtsxMethods";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import {checkFeeStatusAsync, checkBalance} from "common/trxHelper";
 import {Price, Asset} from "common/MarketClasses";
 import {debounce} from "lodash-es";
-import {Button, Modal} from "bitshares-ui-style-guide";
+import {Button, Modal} from "tusc-ui-style-guide";
 import PropTypes from "prop-types";
 
 class XbtsxWithdrawModal extends React.Component {

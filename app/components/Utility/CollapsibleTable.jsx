@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import ReactDOM from "react-dom";
-import {Table} from "bitshares-ui-style-guide";
+import {Table} from "tusc-ui-style-guide";
 
 class CollapsibleTable extends React.Component {
     constructor(props) {

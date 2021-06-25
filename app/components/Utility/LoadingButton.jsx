@@ -3,7 +3,7 @@ import LoadingIndicator from "../LoadingIndicator";
 import counterpart from "counterpart";
 import {findDOMNode} from "react-dom";
 import PropTypes from "prop-types";
-import {Button} from "bitshares-ui-style-guide";
+import {Button} from "tusc-ui-style-guide";
 
 /** This component gives a convenient way to indicate loading.
  *

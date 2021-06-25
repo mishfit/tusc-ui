@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import ChainTypes from "components/Utility/ChainTypes";
 import BindToChainState from "components/Utility/BindToChainState";
 import DisableCopyText from "../DisableCopyText";
@@ -14,7 +14,7 @@ import utils from "common/utils";
 import counterpart from "counterpart";
 import PropTypes from "prop-types";
 import CopyToClipboard from "react-copy-to-clipboard";
-import {Modal} from "bitshares-ui-style-guide";
+import {Modal} from "tusc-ui-style-guide";
 import {availableGateways} from "lib/common/gateways";
 
 class RuDexGatewayDepositRequest extends React.Component {

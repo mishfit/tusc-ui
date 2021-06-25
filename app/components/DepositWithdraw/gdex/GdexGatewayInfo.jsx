@@ -10,7 +10,7 @@ import {requestDepositAddress} from "../../../lib/common/gdexMethods";
 import QRCode from "qrcode.react";
 import GdexWithdrawModal from "./GdexWithdrawModal";
 import counterpart from "counterpart";
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Modal, Button} from "tusc-ui-style-guide";
 import PropTypes from "prop-types";
 
 class GdexGatewayInfo extends React.Component {

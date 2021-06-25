@@ -1,4 +1,4 @@
-### Validation for bitshares-ui and ant getFieldDecorator
+### Validation for tusc-ui and ant getFieldDecorator
 
 #### Supported types of validation
 
@@ -37,7 +37,7 @@ For the following code: **Validation.Rules.required("Username")** the error mess
 ```jsx
 
 import React from "react";
-import {Form, Input} from "bitshares-ui-style-guide";
+import {Form, Input} from "tusc-ui-style-guide";
 
 export default Form.create({})(
     class exampleForm extends React.Component {

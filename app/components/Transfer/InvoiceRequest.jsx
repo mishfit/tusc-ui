@@ -1,5 +1,5 @@
 import React from "react";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import AccountSelector from "../Account/AccountSelector";
 import AssetSelect from "../Utility/AssetSelect";
 import {compress} from "lzma";
@@ -13,7 +13,7 @@ import {
     Input,
     Tooltip,
     Icon
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import CopyButton from "../Utility/CopyButton";
 

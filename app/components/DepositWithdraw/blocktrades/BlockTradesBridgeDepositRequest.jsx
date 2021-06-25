@@ -15,7 +15,7 @@ import {checkFeeStatusAsync, checkBalance} from "common/trxHelper";
 import {Asset} from "common/MarketClasses";
 import {getConversionJson} from "common/gatewayMethods";
 import PropTypes from "prop-types";
-import {Modal} from "bitshares-ui-style-guide";
+import {Modal} from "tusc-ui-style-guide";
 import QueryString from "query-string";
 import ls from "common/localStorage";
 import {UserManager, WebStorageStateStore} from "oidc-client";
@@ -36,7 +36,7 @@ const REDIRECT_URI = POST_LOGOUT_REDIRECT_URI;
 const SCOPE =
     "offline openid email profile create_new_mappings view_client_transaction_history view_price_estimates";
 import SettingsStore from "stores/SettingsStore";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 
 class ButtonConversion extends React.Component {
     static propTypes = {
@@ -736,8 +736,8 @@ class BlockTradesBridgeDepositRequest extends React.Component {
                             ) != -1
                         ) {
                             if (
-                                input_coin_info.walletType != "bitshares" &&
-                                output_coin_info.walletType == "bitshares"
+                                input_coin_info.walletType != "tusc" &&
+                                output_coin_info.walletType == "tusc"
                             ) {
                                 allowed_mappings_for_deposit[
                                     pair.inputCoinType
@@ -749,8 +749,8 @@ class BlockTradesBridgeDepositRequest extends React.Component {
                                     pair.inputCoinType
                                 ].push(pair.outputCoinType);
                             } else if (
-                                input_coin_info.walletType == "bitshares" &&
-                                output_coin_info.walletType != "bitshares"
+                                input_coin_info.walletType == "tusc" &&
+                                output_coin_info.walletType != "tusc"
                             ) {
                                 allowed_mappings_for_withdraw[
                                     pair.inputCoinType
@@ -762,8 +762,8 @@ class BlockTradesBridgeDepositRequest extends React.Component {
                                     pair.inputCoinType
                                 ].push(pair.outputCoinType);
                             } else if (
-                                input_coin_info.walletType == "bitshares" &&
-                                output_coin_info.walletType == "bitshares"
+                                input_coin_info.walletType == "tusc" &&
+                                output_coin_info.walletType == "tusc"
                             ) {
                                 allowed_mappings_for_conversion[
                                     pair.inputCoinType

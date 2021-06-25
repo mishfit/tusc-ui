@@ -21,14 +21,14 @@ class AccountVotingProxy extends React.Component {
             "baozi",
             "bitcrab",
             "laomao",
-            "bitshares-munich-wallet",
+            "tusc-munich-wallet",
             "abit",
             "dahu",
             "bts1988",
             "harvey",
             "fav",
             "jonnybitcoin",
-            "bitsharesblocks",
+            "tuscblocks",
             "customminer"
         ]),
         existingProxy: "1.2.5", // proxy-to-self

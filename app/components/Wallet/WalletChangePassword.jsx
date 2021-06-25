@@ -5,7 +5,7 @@ import WalletDb from "stores/WalletDb";
 import PasswordConfirm from "./PasswordConfirm";
 import counterpart from "counterpart";
 import PropTypes from "prop-types";
-import {Button, Form, Input, Notification} from "bitshares-ui-style-guide";
+import {Button, Form, Input, Notification} from "tusc-ui-style-guide";
 
 const FormItem = Form.Item;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs/es";
+import {ChainStore} from "tuscjs/es";
 import ChainTypes from "components/Utility/ChainTypes";
 import BindToChainState from "components/Utility/BindToChainState";
 import XbtsxWithdrawModal from "./XbtsxWithdrawModal";
@@ -15,7 +15,7 @@ import counterpart from "counterpart";
 import QRCode from "qrcode.react";
 import PropTypes from "prop-types";
 import CopyToClipboard from "react-copy-to-clipboard";
-import {Modal} from "bitshares-ui-style-guide";
+import {Modal} from "tusc-ui-style-guide";
 
 class XbtsxGatewayDepositRequest extends React.Component {
     static propTypes = {

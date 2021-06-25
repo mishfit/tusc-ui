@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import cname from "classnames";
-import {hash, key} from "bitsharesjs";
-import {Input} from "bitshares-ui-style-guide";
+import {hash, key} from "tuscjs";
+import {Input} from "tusc-ui-style-guide";
 
 let dictionary_set;
 

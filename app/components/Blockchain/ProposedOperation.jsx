@@ -6,13 +6,13 @@ import counterpart from "counterpart";
 import utils from "common/utils";
 import LinkToAccountById from "../Utility/LinkToAccountById";
 import LinkToAssetById from "../Utility/LinkToAssetById";
-import {ChainStore, ChainTypes as grapheneChainTypes} from "bitsharesjs";
+import {ChainStore, ChainTypes as grapheneChainTypes} from "tuscjs";
 // import account_constants from "chain/account_constants";
 const {operations} = grapheneChainTypes;
 import PropTypes from "prop-types";
 import opComponents from "./operations";
 import TranslateWithLinks from "../Utility/TranslateWithLinks";
-import {Icon as AntIcon} from "bitshares-ui-style-guide";
+import {Icon as AntIcon} from "tusc-ui-style-guide";
 
 require("./operations.scss");
 

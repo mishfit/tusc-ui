@@ -4,7 +4,7 @@ import LoadingIndicator from "../LoadingIndicator";
 import LogsActions from "actions/LogsActions";
 import CopyButton from "../Utility/CopyButton";
 import html2canvas from "html2canvas";
-import {Modal, Button, Tooltip} from "bitshares-ui-style-guide";
+import {Modal, Button, Tooltip} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import Icon from "../Icon/Icon";
 
@@ -102,13 +102,13 @@ class ReportModal extends React.Component {
                         <br />
                         &nbsp;&nbsp;
                         <a
-                            href="https://github.com/bitshares/bitshares-ui/issues"
+                            href="https://github.com/tusc/tusc-ui/issues"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{textAlign: "center", width: "100%"}}
                             className="external-link"
                         >
-                            https://github.com/bitshares/bitshares-ui/issues
+                            https://github.com/tusc/tusc-ui/issues
                         </a>
                         <br />
                         <Translate content="modal.report.explanatory_text_3" />

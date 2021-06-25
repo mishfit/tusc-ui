@@ -2,7 +2,7 @@ import React from "react";
 import Translate from "react-translate-component";
 import SettingsActions from "actions/SettingsActions";
 import counterpart from "counterpart";
-import {Modal, Button, Form, Input} from "bitshares-ui-style-guide";
+import {Modal, Button, Form, Input} from "tusc-ui-style-guide";
 
 const ws = "ws://";
 const wss = "wss://";

@@ -9,7 +9,7 @@ import {
     Modal,
     Icon,
     Tooltip
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import React from "react";
 import Translate from "react-translate-component";

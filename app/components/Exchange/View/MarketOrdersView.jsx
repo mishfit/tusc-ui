@@ -5,7 +5,7 @@ import Translate from "react-translate-component";
 import PriceText from "../../Utility/PriceText";
 import AssetName from "../../Utility/AssetName";
 const rightAlign = {textAlign: "right"};
-import {Tooltip, Checkbox} from "bitshares-ui-style-guide";
+import {Tooltip, Checkbox} from "tusc-ui-style-guide";
 
 function MarketOrdersViewTableHeader({
     baseSymbol,

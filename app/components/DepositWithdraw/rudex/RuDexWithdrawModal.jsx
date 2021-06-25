@@ -10,12 +10,12 @@ import AccountActions from "actions/AccountActions";
 import {validateAddress, WithdrawAddresses} from "common/RuDexMethods";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import {checkFeeStatusAsync, checkBalance} from "common/trxHelper";
 import {Price, Asset} from "common/MarketClasses";
 import {debounce} from "lodash-es";
 import PropTypes from "prop-types";
-import {Button, Modal} from "bitshares-ui-style-guide";
+import {Button, Modal} from "tusc-ui-style-guide";
 
 class RuDexWithdrawModal extends React.Component {
     static propTypes = {

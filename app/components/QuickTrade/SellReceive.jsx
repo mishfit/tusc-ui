@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import AmountSelector3 from "../Utility/AmountSelector3";
 import PropTypes from "prop-types";
 import Icon from "../Icon/Icon";
-import {Row, Col} from "bitshares-ui-style-guide";
+import {Row, Col} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 class SellReceive extends Component {

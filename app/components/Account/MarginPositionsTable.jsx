@@ -3,14 +3,14 @@ import MarginPosition from "./MarginPosition";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import AssetWrapper from "../Utility/AssetWrapper";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import Translate from "react-translate-component";
 import counterpart from "counterpart";
 import utils from "common/utils";
 
 import TranslateWithLinks from "../Utility/TranslateWithLinks";
 import Immutable from "immutable";
-import {Popover} from "bitshares-ui-style-guide";
+import {Popover} from "tusc-ui-style-guide";
 
 const alignRight = {textAlign: "right"};
 const alignLeft = {textAlign: "left"};

@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import AmountSelector from "../Utility/AmountSelector";
 import PeriodSelector from "../Utility/PeriodSelector";
 import FeeAssetSelector from "components/Utility/FeeAssetSelector";
@@ -16,7 +16,7 @@ import utils from "common/utils";
 import counterpart from "counterpart";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
-import {Modal, Button, Tooltip, Form} from "bitshares-ui-style-guide";
+import {Modal, Button, Tooltip, Form} from "tusc-ui-style-guide";
 import {DatePicker} from "antd";
 import ApplicationApi from "../../api/ApplicationApi";
 import moment from "moment";

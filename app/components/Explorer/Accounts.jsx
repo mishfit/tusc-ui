@@ -9,9 +9,9 @@ import Icon from "../Icon/Icon";
 import BalanceComponent from "../Utility/BalanceComponent";
 import AccountStore from "stores/AccountStore";
 import LoadingIndicator from "../LoadingIndicator";
-import {Table, Select, Icon as IconStyleGuide} from "bitshares-ui-style-guide";
+import {Table, Select, Icon as IconStyleGuide} from "tusc-ui-style-guide";
 import SearchInput from "../Utility/SearchInput";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 
 class Accounts extends React.Component {
     constructor(props) {

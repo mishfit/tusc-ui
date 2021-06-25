@@ -70,7 +70,7 @@ module.exports = function(env) {
         new HtmlWebpackPlugin({
             template: "!!handlebars-loader!app/assets/index.hbs",
             templateParameters: {
-                title: "BitShares " + __VERSION__,
+                title: "TUSC " + __VERSION__,
                 INCLUDE_BASE: !!env.prod && !env.hash,
                 PRODUCTION: !!env.prod,
                 ELECTRON: !!env.electron
@@ -424,13 +424,13 @@ module.exports = function(env) {
                     root_dir,
                     "node_modules/moment/moment.js"
                 ),
-                bitsharesjs$: path.resolve(
+                tuscjs$: path.resolve(
                     root_dir,
-                    "node_modules/bitsharesjs/"
+                    "node_modules/tuscjs/"
                 ),
-                "bitshares-ui-style-guide$": path.resolve(
+                "tusc-ui-style-guide$": path.resolve(
                     root_dir,
-                    "node_modules/bitshares-ui-style-guide/dist/main.js"
+                    "node_modules/tusc-ui-style-guide/dist/main.js"
                 )
             }
         },

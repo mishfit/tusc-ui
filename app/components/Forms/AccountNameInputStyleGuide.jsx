@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import AccountActions from "actions/AccountActions";
 import AccountStore from "stores/AccountStore";
-import {ChainValidation} from "bitsharesjs";
+import {ChainValidation} from "tuscjs";
 import counterpart from "counterpart";
 import AltContainer from "alt-container";
 import ReactTooltip from "react-tooltip";
-import {Form, Input} from "bitshares-ui-style-guide";
+import {Form, Input} from "tusc-ui-style-guide";
 
 class AccountNameInput extends React.Component {
     static propTypes = {

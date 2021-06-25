@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Tabs} from "bitshares-ui-style-guide";
+import {Card, Tabs} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import InvoiceRequest from "./InvoiceRequest";
 import InvoicePay from "./InvoicePay";

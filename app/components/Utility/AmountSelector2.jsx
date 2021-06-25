@@ -1,7 +1,7 @@
 import React from "react";
 import Translate from "react-translate-component";
 import PropTypes from "prop-types";
-import {Row, Col, Tooltip} from "bitshares-ui-style-guide";
+import {Row, Col, Tooltip} from "tusc-ui-style-guide";
 import AmountSelector from "../Utility/AmountSelectorStyleGuide";
 import AssetSelect from "../Utility/AssetSelect";
 

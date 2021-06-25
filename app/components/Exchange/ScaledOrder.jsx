@@ -11,7 +11,7 @@ import {
     Select,
     Table,
     Collapse
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import {checkFeeStatusAsync} from "common/trxHelper";
 import {Validation} from "services/Validation/Validation";
 import {
@@ -24,7 +24,7 @@ import AltContainer from "alt-container";
 import BindToChainState from "components/Utility/BindToChainState";
 import AccountStore from "../../stores/AccountStore";
 import ChainTypes from "../Utility/ChainTypes";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import PropTypes from "prop-types";
 import AssetNameWrapper from "../Utility/AssetName";
 import assetUtils from "lib/common/asset_utils";

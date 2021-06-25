@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Input, Icon} from "bitshares-ui-style-guide";
+import {Input, Icon} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 const searchInput = React.createRef();

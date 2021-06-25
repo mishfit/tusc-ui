@@ -1,14 +1,14 @@
 import React from "react";
 import counterpart from "counterpart";
 import MarketsActions from "actions/MarketsActions";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import {LimitOrder, SettleOrder, FeedPrice} from "common/MarketClasses";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
 import SettingsActions from "actions/SettingsActions";
 import marketUtils from "common/market_utils";
 import Translate from "react-translate-component";
-import {Input, Icon, Table, Switch, Button} from "bitshares-ui-style-guide";
+import {Input, Icon, Table, Switch, Button} from "tusc-ui-style-guide";
 import AccountOrderRowDescription from "./AccountOrderRowDescription";
 import CollapsibleTable from "../Utility/CollapsibleTable";
 import {groupBy, sumBy, meanBy} from "lodash-es";

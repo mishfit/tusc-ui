@@ -1,6 +1,6 @@
 import React from "react";
 import {curry, flow, reject, clone, toPairs, omit, get, pick} from "lodash-es";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import ChainTypes from "./ChainTypes";
 import utils from "common/utils";
 import {getDisplayName} from "common/reactUtils";
@@ -322,7 +322,7 @@ function BindToChainState(Component, options = {}) {
                     else if (new_obj === null) new_state[key] = new_obj;
                     ++all_objects_counter;
                     if (new_obj !== undefined) ++resolved_objects_counter;
-                    if (prop === "bitsharesblocksazdazdz")
+                    if (prop === "tuscblocksazdazdz")
                         console.log(
                             "account:",
                             prop,

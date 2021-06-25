@@ -2,7 +2,7 @@ import React from "react";
 const TradingView = require("../../../charting_library/charting_library.min.js");
 import colors from "assets/colors";
 import {getResolutionsFromBuckets, getTVTimezone} from "./tradingViewClasses";
-import {Modal, Input, Table, Button, Icon} from "bitshares-ui-style-guide";
+import {Modal, Input, Table, Button, Icon} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import SettingsStore from "stores/SettingsStore";
 import SettingsActions from "actions/SettingsActions";

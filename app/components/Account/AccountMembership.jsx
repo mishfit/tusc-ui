@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import Statistics from "./Statistics";
@@ -12,7 +12,7 @@ import accountUtils from "common/account_utils";
 import {Tabs, Tab} from "../Utility/Tabs";
 import {getWalletName} from "branding";
 import {getWalletURL} from "../../branding";
-import {Button} from "bitshares-ui-style-guide";
+import {Button} from "tusc-ui-style-guide";
 import AccountReferralsTable from "./AccountReferralsTable";
 import {settingsAPIs} from "../../api/apiConfig";
 

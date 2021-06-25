@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import {ChainStore, key} from "bitsharesjs";
+import {ChainStore, key} from "tuscjs";
 import AmountSelector from "../Utility/AmountSelectorStyleGuide";
 import cnames from "classnames";
 import AccountSelector from "../Account/AccountSelector";
@@ -24,7 +24,7 @@ import {
     DatePicker,
     Tooltip,
     Radio
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import moment from "moment";
 import HtlcActions from "actions/HtlcActions";
 import "../../assets/stylesheets/components/_htlc.scss";

@@ -1,7 +1,7 @@
 import React from "react";
 import AltContainer from "alt-container";
 import counterpart from "counterpart";
-import {Form, Select} from "bitshares-ui-style-guide";
+import {Form, Select} from "tusc-ui-style-guide";
 import WalletUnlockStore from "stores/WalletUnlockStore";
 import SettingsActions from "actions/SettingsActions";
 import {getAllowedLogins} from "../../branding";

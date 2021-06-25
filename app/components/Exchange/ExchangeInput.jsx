@@ -1,5 +1,5 @@
 import React from "react";
-import {Input} from "bitshares-ui-style-guide";
+import {Input} from "tusc-ui-style-guide";
 import {DecimalChecker} from "../Utility/DecimalChecker";
 
 class ExchangeInput extends DecimalChecker {

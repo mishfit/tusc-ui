@@ -11,7 +11,7 @@ import {
     ChainValidation,
     FetchChain,
     FetchChainObjects
-} from "bitsharesjs";
+} from "tuscjs";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import counterpart from "counterpart";
@@ -26,7 +26,7 @@ import {
     Icon as AntIcon,
     Select,
     Form
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 
 const MAX_LOOKUP_ATTEMPTS = 5;
 /*

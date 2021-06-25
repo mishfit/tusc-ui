@@ -4,11 +4,11 @@ import asset_utils from "common/asset_utils";
 import AssetWrapper from "./AssetWrapper";
 import counterpart from "counterpart";
 import PropTypes from "prop-types";
-import {Popover} from "bitshares-ui-style-guide";
-import {ChainStore, FetchChainObjects} from "bitsharesjs";
+import {Popover} from "tusc-ui-style-guide";
+import {ChainStore, FetchChainObjects} from "tuscjs";
 import GatewayStore from "../../stores/GatewayStore";
 import {getAssetAndGateway} from "../../lib/common/gatewayUtils";
-import {Icon, Tooltip} from "bitshares-ui-style-guide";
+import {Icon, Tooltip} from "tusc-ui-style-guide";
 
 class AssetName extends React.Component {
     static propTypes = {

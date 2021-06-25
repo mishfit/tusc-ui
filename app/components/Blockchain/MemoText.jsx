@@ -7,7 +7,7 @@ import {connect} from "alt-react";
 import WalletUnlockStore from "stores/WalletUnlockStore";
 import utils from "common/utils";
 import ReactTooltip from "react-tooltip";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 import sanitize from "sanitize";
 
 class MemoText extends React.Component {

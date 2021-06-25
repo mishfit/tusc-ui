@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Apis} from "bitsharesjs-ws";
+import {Apis} from "tuscjs-ws";
 import {
     Input,
     Card,
@@ -10,9 +10,9 @@ import {
     Tooltip,
     Icon,
     Table
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import utils from "common/utils";
 import DirectDebitModal from "../Modal/DirectDebitModal";
 import DirectDebitClaimModal from "../Modal/DirectDebitClaimModal";

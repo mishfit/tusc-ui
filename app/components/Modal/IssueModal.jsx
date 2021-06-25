@@ -7,7 +7,7 @@ import counterpart from "counterpart";
 import ApplicationApi from "api/ApplicationApi";
 import AccountSelector from "../Account/AccountSelector";
 import AmountSelector from "../Utility/AmountSelector";
-import {Notification, Modal, Button} from "bitshares-ui-style-guide";
+import {Notification, Modal, Button} from "tusc-ui-style-guide";
 
 class IssueModal extends React.Component {
     static propTypes = {

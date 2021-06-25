@@ -66,7 +66,7 @@
         "in_open": "Это количество %(asset)s, находящихся в ваших открытых ордерах.",
         "in_open_value": "Это оценочная стоимость %(asset)s, находящихся в ваших открытых ордерах.",
         "intro_text_1": "Ваша децентрализованная платформа",
-        "intro_text_2": "<b>DEX</b> децентрализована по самой своей сути и позволяет вам торговать основным токеном BitShares (BTS) и разнообразными не требующими доверия активами со стабильной, привязанной к рынку ценой, такими как bitUSD, bitCNY, bitGold и многими другими. Все эти активы могут торговаться <b>без риска</b>, связанного с участием контрагентов, оставляя контроль над вашими средствами исключительно в ваших руках.",
+        "intro_text_2": "<b>DEX</b> децентрализована по самой своей сути и позволяет вам торговать основным токеном TUSC (BTS) и разнообразными не требующими доверия активами со стабильной, привязанной к рынку ценой, такими как bitUSD, bitCNY, bitGold и многими другими. Все эти активы могут торговаться <b>без риска</b>, связанного с участием контрагентов, оставляя контроль над вашими средствами исключительно в ваших руках.",
         "intro_text_3": "Также <b>DEX</b> дает возможность создавать выпускаемые пользователем активы (user-issued assets – UIA), которые могут торговаться против любого другого не требующего доверия/выпущенного пользователем актива на платформе. Самым известным эмитентом на платформе является <b>OpenLedger</b>, поддерживающий такие активы, как BTC, ETH, DASH, STEEM и многие другие",
         "intro_text_4": "Это уникальный микс традиционной и децентрализованной торговли, и всё это в столь знакомом для криптовалютных трейдеров интерфейсе биржи. Удачной торговли!",
         "intro_text_title": "Добро пожаловать в %(wallet_name)s",
@@ -476,7 +476,7 @@
         "ws_status": "Состояние подключения полного узла"
     },
     "assets": {
-        "BTS": "BTS является основным токеном блокчейна BitShares"
+        "BTS": "BTS является основным токеном блокчейна TUSC"
     },
     "boolean": {
         "false": "Неверно",
@@ -1075,7 +1075,7 @@
     },
     "external_service_provider": {
         "bridge": {
-            "description": "Bridges are external service providers that allow you to swap assets in and out of the BitShares Blockchain. For example, you can send your BTC on the Bitcoin Blockchain to a Bridge, who will swap it and give you an equivalent amount of BTS or another Gateways UIA on the BitShares Blockchain (for a fee of course). Normally, a Bridge does not hold your funds, but trust is required that they send you back the proper amount of the target asset. As it is an external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
+            "description": "Bridges are external service providers that allow you to swap assets in and out of the TUSC Blockchain. For example, you can send your BTC on the Bitcoin Blockchain to a Bridge, who will swap it and give you an equivalent amount of BTS or another Gateways UIA on the TUSC Blockchain (for a fee of course). Normally, a Bridge does not hold your funds, but trust is required that they send you back the proper amount of the target asset. As it is an external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
             "short": "Bridge",
             "what_is": "What is a Bridge?"
         },
@@ -1083,7 +1083,7 @@
         "disabled_asset_2": "For more information visit Settings -> Entry External Service Providers. For any issues or questions please contact the gateway operator directly.",
         "expect_more": "If you expect to see more deposit and withdraw options for your assets, please check the External Service Providers in Settings > General.",
         "gateway": {
-            "description": "Gateways are external service providers that allow you to deposit, trade and withdraw assets into the BitShares Blockchain that are not native to it. For example, you can send your BTC on the Bitcoin Blockchain to a Gateway, who will in turn give you an UIA (user issued asset) on the BitShares Blockchain, with the promise that you can withdraw it again (for a fee of course). While you are holding such an UIA on the BitShares Blockchain, the Gateway becomes the custodian of your funds. As it is external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
+            "description": "Gateways are external service providers that allow you to deposit, trade and withdraw assets into the TUSC Blockchain that are not native to it. For example, you can send your BTC on the Bitcoin Blockchain to a Gateway, who will in turn give you an UIA (user issued asset) on the TUSC Blockchain, with the promise that you can withdraw it again (for a fee of course). While you are holding such an UIA on the TUSC Blockchain, the Gateway becomes the custodian of your funds. As it is external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
             "prefix": "Prefix",
             "short": "Gateway",
             "what_is": "What is a Gateway?"
@@ -1095,7 +1095,7 @@
             "landing": "Landing Page",
             "name": "Name",
             "not_now": "Not now",
-            "table_description": "The table below lists all Gateways and Bridges that are currently integrated with the BitShares UI, this does not reflect any kind of endorsement. It lists the Name (sorted alphabetically), the type (Bridge or Gateway, and if Gateway the asset prefix, e.g. RUDEX.BTC), a link to their landing page with further information and an affiliate link to the Gateways wallet (if exists, usually a branded version of this UI). Please do your own due dilligence.",
+            "table_description": "The table below lists all Gateways and Bridges that are currently integrated with the TUSC UI, this does not reflect any kind of endorsement. It lists the Name (sorted alphabetically), the type (Bridge or Gateway, and if Gateway the asset prefix, e.g. RUDEX.BTC), a link to their landing page with further information and an affiliate link to the Gateways wallet (if exists, usually a branded version of this UI). Please do your own due dilligence.",
             "title": "Choose your preferred Service Providers",
             "type": "Type",
             "use_none": "Use none",
@@ -1103,12 +1103,12 @@
             "wallet": "Wallet"
         },
         "welcome": {
-            "explanation_dex": "BitShares offers a native decentralized exchange, the BitShares DEX. It is running completely on the blockchain with no need for centralized services, even the order matching is transparently on-chain.",
+            "explanation_dex": "TUSC offers a native decentralized exchange, the TUSC DEX. It is running completely on the blockchain with no need for centralized services, even the order matching is transparently on-chain.",
             "explanation_later": "If you want to adjust this later on, you can also choose the external service providers in the Settings.",
-            "explanation_service_providers": "You can trade anything against everything, as long as the asset (token) is available on the BitShares Blockchain. For tokens that are not native to it there exist external service providers (so called Gateways and Bridges), that allow you to trade tokens like BTC on the BitShares DEX by providing you their own IOU ('I owe you') of it.",
-            "explanation_what_to_do": "You may choose which of those service providers you want to see readily available in the BitShares UI. To do so, click 'Choose Services'. If you want to keep using the BitShares UI just like before, lick 'Not now'.",
-            "first_line": "today, we want to give you some insight on the BitShares Blockchain and services around it.",
-            "hello": "Dear BitShares' User"
+            "explanation_service_providers": "You can trade anything against everything, as long as the asset (token) is available on the TUSC Blockchain. For tokens that are not native to it there exist external service providers (so called Gateways and Bridges), that allow you to trade tokens like BTC on the TUSC DEX by providing you their own IOU ('I owe you') of it.",
+            "explanation_what_to_do": "You may choose which of those service providers you want to see readily available in the TUSC UI. To do so, click 'Choose Services'. If you want to keep using the TUSC UI just like before, lick 'Not now'.",
+            "first_line": "today, we want to give you some insight on the TUSC Blockchain and services around it.",
+            "hello": "Dear TUSC' User"
         }
     },
     "fees": {
@@ -1505,7 +1505,7 @@
             "quantity": "Quantity",
             "recipient_account": "Recipient Account",
             "recipient_name": "Recipient Name",
-            "recipient_name_tooltip": "You can define an arbitrary plaintext name for yourself to indicate who is being paid. Must not be a BitShares account name.",
+            "recipient_name_tooltip": "You can define an arbitrary plaintext name for yourself to indicate who is being paid. Must not be a TUSC account name.",
             "submit": "Submit",
             "title": "Request"
         },
@@ -1567,7 +1567,7 @@
             "confirm": "ПОДТВЕРДИТЬ",
             "create_committee": "Станьте членом комитета",
             "from": "От",
-            "text": "После голосования и утверждения на позицию активного члена комитета вы можете участвовать в установлении политики и параметров блокчейна BitShares, таких как: <ul><li>Комиссии за транзакции</li>Параметры BitAssets (например, рыночные комиссии)<li><li>Параметры блокчейна (например, размер блока и интервал)</li><li>Параметры рефералов и вестинга (процент кешбэка для пожизненных членов и вестинговый период)</li><li>Другие вопросы управления</li></ul>Отправьте ссылку на свой веб-сайт или пост на форуме, объясняющий, почему именно вы будете образцовым участником, чтобы привлечь достаточно голосов и получить активный статус. Члены комитета должны иметь базовое техническое понимание платформы BitShares и обладать знанием и опытом в ключевых аспектах управления автономным блокчейном. Это неоплачиваемая позиция.",
+            "text": "После голосования и утверждения на позицию активного члена комитета вы можете участвовать в установлении политики и параметров блокчейна TUSC, таких как: <ul><li>Комиссии за транзакции</li>Параметры BitAssets (например, рыночные комиссии)<li><li>Параметры блокчейна (например, размер блока и интервал)</li><li>Параметры рефералов и вестинга (процент кешбэка для пожизненных членов и вестинговый период)</li><li>Другие вопросы управления</li></ul>Отправьте ссылку на свой веб-сайт или пост на форуме, объясняющий, почему именно вы будете образцовым участником, чтобы привлечь достаточно голосов и получить активный статус. Члены комитета должны иметь базовое техническое понимание платформы TUSC и обладать знанием и опытом в ключевых аспектах управления автономным блокчейном. Это неоплачиваемая позиция.",
             "url": "URL",
             "web_example": "Добавьте ссылку на свой пост с предложением кандидатуры члена комитета"
         },
@@ -1664,7 +1664,7 @@
             "address_not_valid": "Недействительный адрес",
             "amount": "Сумма к выводу",
             "available": "Доступно: ",
-            "bitshares_account": "Отправить на аккаунт %(wallet_name)s",
+            "tusc_account": "Отправить на аккаунт %(wallet_name)s",
             "cancel": "Отменить",
             "cannot_cover": "Недостаточно средств",
             "estimated_value": "Ориентировочная стоимость",
@@ -1876,7 +1876,7 @@
             "add_prediction": "A prediction is reflected as a limit order on the market of the prediction market asset with its collateral. This lets you create a buy order (you agree with the prediction), or a sell order with previous borrowing of the prediction market asset (you disagree with the prediction). You can also oppose one of the existing predictions listed below, which correlates to matching one of the existing limit orders on the blockchain.",
             "create_prediction_market_asset": "A prediction market is a special kind of SmartCoin. This lets you create such a prediction market asset with inputs tailored for this purpose.",
             "hide_invalid_asset": "Per default the table below only shows prediction market assets that meet common standards required for a consistent user experience (prediction and resolution date are given, and reasonable market fee). Uncheck this to show all assets that exist on the blockchain, and make sure you know what you are doing.",
-            "hide_unknown_houses": "Per default the table below only shows prediction market assets of known asset owners that meet requirements to increase their trustworthiness. As a participant, you need trust in the asset owner such that the asset will be resolved according to the real world outcome. Uncheck this to show all asset owners that exist on the blockchain, and make sure you know what you are doing. If you are the owner of a prediction market asset and want to be included in the default list, please contact the BitShares community.",
+            "hide_unknown_houses": "Per default the table below only shows prediction market assets of known asset owners that meet requirements to increase their trustworthiness. As a participant, you need trust in the asset owner such that the asset will be resolved according to the real world outcome. Uncheck this to show all asset owners that exist on the blockchain, and make sure you know what you are doing. If you are the owner of a prediction market asset and want to be included in the default list, please contact the TUSC community.",
             "oppose_is_incorrect": "You are opposing someone that thinks the prediction is incorrect. That means, you think the prediction will prove true. On the blockchain that reflects as buying and hodling the prediction market asset.",
             "oppose_proves_true": "You are opposing someone that thinks the prediction proves true. That means, you think the prediction will be incorrect. On the blockchain that reflects as borrowing and selling the prediction market asset.",
             "what_is_a_prediction_market_asset": "A prediction market asset is a special kind of asset that allows you to agree or disagree with the prediction statement of the asset and put collateral behind your opinion. It can be created by any user, and if you are participating you need to trust the asset owner to properly reflects the real world outcome on the blockchain.",
@@ -1985,7 +1985,7 @@
         "walletDescription": "bin-файл будет создан автоматически. Пожалуйста, скачайте и сохраните его в безопасном месте. В будущем вам нужно будет загрузить этот файл, чтобы войти в свой аккаунт. ",
         "walletLoginByValue": "bin-файл + пароль",
         "walletModelTitle": "с bin-файлом",
-        "walletNote": "Пожалуйста, имейте в виду, что BitShares не хранит пароли пользователей и не может восстановить их аккаунты в случае утери пароля.",
+        "walletNote": "Пожалуйста, имейте в виду, что TUSC не хранит пароли пользователей и не может восстановить их аккаунты в случае утери пароля.",
         "whyBinFile": "Зачем мне нужен bin-файл?"
     },
     "scaled_orders": {
@@ -2179,7 +2179,7 @@
         "borrow": {
             "borrow_tooltip": "Вы также можете найти эту функцию на своей инфопанели во вкладке «Маржинальные позиции» или нажав «Занять» на бирже",
             "choose": " Выберите SmartCoin, для которого вы хотите создать позицию",
-            "description": "Займите BitAsset у блокчейна BitShares путем блокировки в нем залогового обеспечения (например, bitUSD, bitCNY и т.д.)",
+            "description": "Займите BitAsset у блокчейна TUSC путем блокировки в нем залогового обеспечения (например, bitUSD, bitCNY и т.д.)",
             "do_it": " Сделаем это!",
             "get_started": " Начало работы",
             "navigate_with_keys": " Механизм генерации SmartCoin будет объяснен в следующих шагах. Вы также можете использовать клавиши со стрелками для навигации",
@@ -2193,7 +2193,7 @@
                 "title_within": "Каковы преимущества данного метода?"
             },
             "steps_concept": {
-                "text": " Обеспеченная долговая позиция позволяет каждому пользователю блокчейна BitShares генерировать SmartCoins (MPA), предоставляя залоговое обеспечение. Обеспечение блокируется до тех пор, пока вы не вернете сгенерированные вами SmartCoins. Вы фактически занимаете SmartCoin у блокчейна BitShares.",
+                "text": " Обеспеченная долговая позиция позволяет каждому пользователю блокчейна TUSC генерировать SmartCoins (MPA), предоставляя залоговое обеспечение. Обеспечение блокируется до тех пор, пока вы не вернете сгенерированные вами SmartCoins. Вы фактически занимаете SmartCoin у блокчейна TUSC.",
                 "text_legend": " Например, bitUSD: предоставьте BTS в качестве залогового обеспечения, чтобы занять bitUSD",
                 "title": " Концепция",
                 "title_within": "Что такое обеспеченная долговая позиция (CDP)?"
@@ -2204,7 +2204,7 @@
                 "title_within": ""
             },
             "steps_introduction": {
-                "text": "Используйте это нативное децентрализованное приложение на базе блокчейна BitShares для управления обеспечением депозита и генерацией SmartCoins.",
+                "text": "Используйте это нативное децентрализованное приложение на базе блокчейна TUSC для управления обеспечением депозита и генерацией SmartCoins.",
                 "title_within": "Это место генерации SmartCoins (привязанных к рынку активов – MPA)"
             },
             "steps_risks": {
@@ -2314,7 +2314,7 @@
             "title": "Перевод в назначенное время"
         },
         "voting": {
-            "description": "Голосуйте за производителей блоков, членов комитета и рабочие предложения, чтобы лично повлиять на принимаемые стратегические решения и развитие блокчейна BitShares.",
+            "description": "Голосуйте за производителей блоков, членов комитета и рабочие предложения, чтобы лично повлиять на принимаемые стратегические решения и развитие блокчейна TUSC.",
             "title": "Голосование"
         }
     },
@@ -2695,7 +2695,7 @@
         }
     },
     "voting": {
-        "description": "Блокчейн BitShares позволяет держателям его базового токена BTS голосовать за производителей блоков (заверителей), членов комитета (управления блокчейном), рабочие предложения (оплата блокчейном задач и стратегических решений через Предложения/Опросы).",
+        "description": "Блокчейн TUSC позволяет держателям его базового токена BTS голосовать за производителей блоков (заверителей), членов комитета (управления блокчейном), рабочие предложения (оплата блокчейном задач и стратегических решений через Предложения/Опросы).",
         "title": "Голосование"
     },
     "walkthrough": {
@@ -2737,7 +2737,7 @@
         "backup_brainkey": "Резервный Brainkey",
         "backup_explain": "Нажав на кнопку ниже, вы создадите резервную копию с расширением .bin. Этот файл зашифрован паролем вашего кошелька и содержит все приватные ключи вашего аккаунта. Он может быть использован для восстановления вашего кошелька или его перемещения на другой компьютер/браузер.",
         "backup_login": "Резервное копирование и вход в систему",
-        "backup_new_account": "Поздравляем, вы только что создали новый аккаунт в %(wallet_name)s, работающем на базе блокчейна BitShares! Настоятельно рекомендуем вам сразу же создать резервную копию кошелька. Без резервной копии восстановить ваш аккаунт в случае повреждения компьютера будет невозможно.",
+        "backup_new_account": "Поздравляем, вы только что создали новый аккаунт в %(wallet_name)s, работающем на базе блокчейна TUSC! Настоятельно рекомендуем вам сразу же создать резервную копию кошелька. Без резервной копии восстановить ваш аккаунт в случае повреждения компьютера будет невозможно.",
         "backup_types": "Типы резервных копий",
         "backup_warning": "Файл резервной копии ваших приватных ключей ещё не создавался. В целях безопасности мы рекомендуем пользователям не входить в систему без предварительно созданной резервной копии своих приватных ключей.",
         "balance_claim_lookup": "Просмотреть балансы",
@@ -2805,7 +2805,7 @@
         "import_backup_choose": "Пожалуйста, выберите вашу резервную копию в окне ниже. Это абсолютно безопасно, так как файл копии никуда не загружается и никогда не покидает ваш браузер.",
         "import_balance": "Импортировать баланс(ы)",
         "import_bts": "Импортировать ключи, экспортированные с BTS 0.9.3c",
-        "import_bts1": "Импортировать из BitShares 0.9.3c",
+        "import_bts1": "Импортировать из TUSC 0.9.3c",
         "import_key_success": "Успешно импортированы %(count)s ключей",
         "import_keys": "Импортировать ключи",
         "import_keys_tool": "Инструмент импорта ключей",

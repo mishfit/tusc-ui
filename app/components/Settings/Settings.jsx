@@ -14,7 +14,7 @@ import BackupSettings from "./BackupSettings";
 import AccessSettings from "./AccessSettings";
 import {set} from "lodash-es";
 import {getAllowedLogins, getFaucet} from "../../branding";
-import {Input, Form} from "bitshares-ui-style-guide";
+import {Input, Form} from "tusc-ui-style-guide";
 
 class Settings extends React.Component {
     constructor(props) {

@@ -4,7 +4,7 @@ import Translate from "react-translate-component";
 import JoinCommitteeModal from "../../Modal/JoinCommitteeModal";
 import VotingAccountsList from "../VotingAccountsList";
 import cnames from "classnames";
-import {Input, Icon as AntIcon, Button} from "bitshares-ui-style-guide";
+import {Input, Icon as AntIcon, Button} from "tusc-ui-style-guide";
 import SearchInput from "../../Utility/SearchInput";
 
 export default class Committee extends Component {

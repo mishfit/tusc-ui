@@ -6,7 +6,7 @@ import PrivateKeyStore from "stores/PrivateKeyStore";
 import QrcodeModal from "./Modal/QrcodeModal";
 import counterpart from "counterpart";
 import PropTypes from "prop-types";
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Modal, Button} from "tusc-ui-style-guide";
 
 export default class PrivateKeyView extends Component {
     static propTypes = {

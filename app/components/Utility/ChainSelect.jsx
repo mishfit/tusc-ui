@@ -1,7 +1,7 @@
 import React from "react";
 import Translate from "react-translate-component";
 import PropTypes from "prop-types";
-import {Select} from "bitshares-ui-style-guide";
+import {Select} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import {Map} from "immutable";
 
@@ -16,7 +16,7 @@ class ChainSelectView extends React.Component {
     };
 
     static defaultProps = {
-        chains: ["BitShares Blockchain"],
+        chains: ["TUSC Blockchain"],
         placeholder: null,
         style: {},
         selectStyle: {}

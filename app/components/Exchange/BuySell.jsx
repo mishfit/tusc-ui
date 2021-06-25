@@ -17,7 +17,7 @@ import {DatePicker} from "antd";
 import moment from "moment";
 import Icon from "../Icon/Icon";
 import SettleModal from "../Modal/SettleModal";
-import {Button, Select, Popover, Tooltip} from "bitshares-ui-style-guide";
+import {Button, Select, Popover, Tooltip} from "tusc-ui-style-guide";
 import ReactTooltip from "react-tooltip";
 import AccountStore from "../../stores/AccountStore";
 import GatewayStore from "../../stores/GatewayStore";

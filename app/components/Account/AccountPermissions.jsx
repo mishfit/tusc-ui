@@ -6,14 +6,14 @@ import utils from "common/utils";
 import accountUtils from "common/account_utils";
 import {createPaperWalletAsPDF} from "common/paperWallet";
 import ApplicationApi from "api/ApplicationApi";
-import {PublicKey} from "bitsharesjs";
+import {PublicKey} from "tuscjs";
 import AccountPermissionsList from "./AccountPermissionsList";
 import AccountPermissionsMigrate from "./AccountPermissionsMigrate";
 import PubKeyInput from "../Forms/PubKeyInput";
 import {Tabs, Tab} from "../Utility/Tabs";
 import HelpContent from "../Utility/HelpContent";
 import {RecentTransactions} from "./RecentTransactions";
-import {Notification} from "bitshares-ui-style-guide";
+import {Notification} from "tusc-ui-style-guide";
 
 class AccountPermissions extends React.Component {
     constructor(props) {

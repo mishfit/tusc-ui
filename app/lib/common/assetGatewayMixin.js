@@ -3,7 +3,7 @@ import Translate from "react-translate-component";
 import counterpart from "counterpart";
 import {getGatewayStatusByAsset} from "common/gatewayUtils";
 import {Link} from "react-router-dom";
-import {Select, Icon} from "bitshares-ui-style-guide";
+import {Select, Icon} from "tusc-ui-style-guide";
 import utils from "common/utils";
 
 function _getCoinToGatewayMapping(boolCheck = "depositAllowed") {

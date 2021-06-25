@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Translate from "react-translate-component";
 import counterpart from "counterpart";
 import Icon from "../Icon/Icon";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 
 export default function AccountHeaderSelection(props) {
     return (

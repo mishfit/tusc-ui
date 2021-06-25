@@ -25,7 +25,7 @@ class OpenLedgerFiatTransactionHistory extends React.Component {
             jsonrpc: "2.0",
             method: "getRequestsList",
             params: {
-                bitsharesAccountName: this.props.account.get("name")
+                tuscAccountName: this.props.account.get("name")
             },
             id: 1
         };

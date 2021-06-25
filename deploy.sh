@@ -17,10 +17,10 @@ echo TRAVIS_PULL_REQUEST_BRANCH=$TRAVIS_PULL_REQUEST_BRANCH
 
 if [[ "$unamestr" == 'Linux' && $TRAVIS_BRANCH = 'develop' && -z $TRAVIS_PULL_REQUEST_BRANCH ]]
 then
-    ## develop.bitshares.org subdomain (independent repo)
+    ## develop.tusc.org subdomain (independent repo)
     echo "Pushing new develop subdomain repo"
-    git clone https://github.com:${GITHUB_TOKEN}@github.com/${DEVELOP_REPO} $TRAVIS_BUILD_DIR/develop.bitshares.org
-    cd $TRAVIS_BUILD_DIR/develop.bitshares.org
+    git clone https://github.com:${GITHUB_TOKEN}@github.com/${DEVELOP_REPO} $TRAVIS_BUILD_DIR/develop.tusc.org
+    cd $TRAVIS_BUILD_DIR/develop.tusc.org
     rm -rf ./*
     git checkout ./CNAME
     cp -Rv $TRAVIS_BUILD_DIR/build/hash-history/* .
@@ -29,10 +29,10 @@ then
     git push
 elif [[ "$unamestr" == 'Linux' && -n $TRAVIS_TAG && $TRAVIS_BRANCH =~ .+-rc[1-9]$ ]]
 then
-    ## staging.bitshares.org subdomain (independent repo)
+    ## staging.tusc.org subdomain (independent repo)
     echo "Pushing new staging subdomain repo"
-    git clone https://github.com:${GITHUB_TOKEN}@github.com/${STAGING_REPO} $TRAVIS_BUILD_DIR/staging.bitshares.org
-    cd $TRAVIS_BUILD_DIR/staging.bitshares.org
+    git clone https://github.com:${GITHUB_TOKEN}@github.com/${STAGING_REPO} $TRAVIS_BUILD_DIR/staging.tusc.org
+    cd $TRAVIS_BUILD_DIR/staging.tusc.org
     rm -rf ./*
     git checkout ./CNAME
     cp -Rv $TRAVIS_BUILD_DIR/build/hash-history/* .
@@ -41,10 +41,10 @@ then
     git push
 elif [[ "$unamestr" == 'Linux' && -n $TRAVIS_TAG && $TRAVIS_BRANCH =~ ^[2-9]\.[0-9]\.[0-9]{6}\.?[0-9]?$ ]]
 then
-    ## wallet.bitshares.org subdomain (independent repo)
+    ## wallet.tusc.org subdomain (independent repo)
     echo "Pushing new wallet subdomain repo"
-    git clone https://github.com:${GITHUB_TOKEN}@github.com/${WALLET_REPO} $TRAVIS_BUILD_DIR/wallet.bitshares.org
-    cd $TRAVIS_BUILD_DIR/wallet.bitshares.org
+    git clone https://github.com:${GITHUB_TOKEN}@github.com/${WALLET_REPO} $TRAVIS_BUILD_DIR/wallet.tusc.org
+    cd $TRAVIS_BUILD_DIR/wallet.tusc.org
     git checkout gh-pages
     rm -rf ./*
     git checkout ./CNAME

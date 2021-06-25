@@ -1,6 +1,6 @@
 import {saveAs} from "file-saver";
-import {ChainTypes as grapheneChainTypes, FetchChain} from "bitsharesjs";
-import report from "bitshares-report";
+import {ChainTypes as grapheneChainTypes, FetchChain} from "tuscjs";
+import report from "tusc-report";
 const {operations} = grapheneChainTypes;
 const ops = Object.keys(operations);
 
@@ -115,7 +115,7 @@ class AccountHistoryExporter {
         let today = new Date();
         saveAs(
             blob,
-            "bitshares-account-history-" +
+            "tusc-account-history-" +
                 accountName +
                 "-" +
                 today.getFullYear() +

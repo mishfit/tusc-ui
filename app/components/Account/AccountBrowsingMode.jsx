@@ -6,7 +6,7 @@ import AccountActions from "actions/AccountActions";
 import SettingsActions from "actions/SettingsActions";
 import counterpart from "counterpart";
 import Translate from "react-translate-component";
-import {Button, Modal, Icon, Popover, Tooltip} from "bitshares-ui-style-guide";
+import {Button, Modal, Icon, Popover, Tooltip} from "tusc-ui-style-guide";
 
 class AccountBrowsingMode extends React.Component {
     constructor(props) {

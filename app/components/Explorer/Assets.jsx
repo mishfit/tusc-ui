@@ -10,11 +10,11 @@ import assetUtils from "common/asset_utils";
 import counterpart from "counterpart";
 import FormattedAsset from "../Utility/FormattedAsset";
 import AssetName from "../Utility/AssetName";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import utils from "common/utils";
 import ls from "common/localStorage";
-import {Apis} from "bitsharesjs-ws";
-import {Radio, Table, Select, Icon} from "bitshares-ui-style-guide";
+import {Apis} from "tuscjs-ws";
+import {Radio, Table, Select, Icon} from "tusc-ui-style-guide";
 import {List} from "antd";
 import SearchInput from "../Utility/SearchInput";
 

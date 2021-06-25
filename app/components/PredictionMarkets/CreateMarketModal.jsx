@@ -7,7 +7,7 @@ import {
     Tooltip,
     Icon,
     DatePicker
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import PropTypes from "prop-types";
 import Translate from "react-translate-component";
 import AssetSelect from "../Utility/AssetSelect";
@@ -15,7 +15,7 @@ import counterpart from "counterpart";
 import AssetActions from "actions/AssetActions";
 import assetUtils from "common/asset_utils";
 import assetConstants from "chain/asset_constants";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import moment from "moment";
 
 const IS_BITASSET = true;

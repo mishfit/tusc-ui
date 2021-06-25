@@ -4,9 +4,9 @@ import BindToChainState from "../Utility/BindToChainState";
 import ChainTypes from "../Utility/ChainTypes";
 import AssetActions from "actions/AssetActions";
 import counterpart from "counterpart";
-import {Radio, Tooltip, Button, Form} from "bitshares-ui-style-guide";
+import {Radio, Tooltip, Button, Form} from "tusc-ui-style-guide";
 import AmountSelector from "../Utility/AmountSelectorStyleGuide";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import {Asset, Price} from "../../lib/common/MarketClasses";
 import assetUtils from "../../lib/common/asset_utils";
 

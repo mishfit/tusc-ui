@@ -5,7 +5,7 @@ import AccountStore from "stores/AccountStore";
 import utils from "common/utils";
 import Translate from "react-translate-component";
 import counterpart from "counterpart";
-import {Notification} from "bitshares-ui-style-guide";
+import {Notification} from "tusc-ui-style-guide";
 
 class CreateWorker extends React.Component {
     constructor() {

@@ -3,7 +3,7 @@ import counterpart from "counterpart";
 import Translate from "react-translate-component";
 import VotingAccountsList from "../VotingAccountsList";
 import cnames from "classnames";
-import {Input, Icon as AntIcon, Button} from "bitshares-ui-style-guide";
+import {Input, Icon as AntIcon, Button} from "tusc-ui-style-guide";
 import JoinWitnessesModal from "../../Modal/JoinWitnessesModal";
 import SearchInput from "../../Utility/SearchInput";
 

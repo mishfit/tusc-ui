@@ -1,13 +1,13 @@
 import React from "react";
-import {Modal, Input, Form, Switch, Button} from "bitshares-ui-style-guide";
+import {Modal, Input, Form, Switch, Button} from "tusc-ui-style-guide";
 import PropTypes from "prop-types";
 import Translate from "react-translate-component";
 import AmountSelector from "../Utility/AmountSelectorStyleGuide";
 import counterpart from "counterpart";
 import {Asset, Price, LimitOrderCreate} from "common/MarketClasses";
 import MarketsActions from "actions/MarketsActions";
-import {Notification, Radio} from "bitshares-ui-style-guide";
-import {ChainStore, FetchChain} from "bitsharesjs";
+import {Notification, Radio} from "tusc-ui-style-guide";
+import {ChainStore, FetchChain} from "tuscjs";
 import ExchangeInput from "components/Exchange/ExchangeInput";
 import ChainTypes from "../Utility/ChainTypes";
 import utils from "common/utils";

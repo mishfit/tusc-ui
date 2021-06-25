@@ -1,11 +1,11 @@
 import React, {Component} from "react";
 import counterpart from "counterpart";
 import Translate from "react-translate-component";
-import {Button, Card, Steps, Tooltip} from "bitshares-ui-style-guide";
+import {Button, Card, Steps, Tooltip} from "tusc-ui-style-guide";
 import debounceRender from "react-debounce-render";
 import AssetWrapper from "../Utility/AssetWrapper";
 import {connect} from "alt-react";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import WalletUnlockActions from "actions/WalletUnlockActions";
 
 import BorrowModal from "../Modal/BorrowModal";

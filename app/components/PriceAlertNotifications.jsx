@@ -3,7 +3,7 @@ import {connect} from "alt-react";
 import MarketsStore from "../stores/MarketsStore";
 import SettingsStore from "../stores/SettingsStore";
 import {PRICE_ALERT_TYPES} from "../services/Exchange";
-import {Notification, Icon} from "bitshares-ui-style-guide";
+import {Notification, Icon} from "tusc-ui-style-guide";
 import Translate from "react-translate-component";
 import counterpart from "counterpart";
 import SettingsActions from "../actions/SettingsActions";

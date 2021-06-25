@@ -9,7 +9,7 @@ import Icon from "../Icon/Icon";
 import WalletDb from "stores/WalletDb";
 import AccountStore from "stores/AccountStore";
 import AccountSelect from "components/Forms/AccountSelect";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import utils from "common/utils";
 import Operation from "components/Blockchain/Operation";
 import notify from "actions/NotificationActions";
@@ -20,7 +20,7 @@ import {
     Alert,
     Switch,
     Input
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 
 class TransactionConfirm extends React.Component {
     constructor(props) {

@@ -8,8 +8,8 @@ import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import FormattedAsset from "../Utility/FormattedAsset";
 import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
-import {ChainStore, ChainTypes as grapheneChainTypes} from "bitsharesjs";
-import {Card} from "bitshares-ui-style-guide";
+import {ChainStore, ChainTypes as grapheneChainTypes} from "tuscjs";
+import {Card} from "tusc-ui-style-guide";
 const {operations} = grapheneChainTypes;
 let ops = Object.keys(operations);
 
@@ -75,7 +75,7 @@ class FeeGroup extends React.Component {
 
             let feeRateForLTM = network_fee;
             if (opId === 10) {
-                // See https://github.com/bitshares/bitshares-ui/issues/996
+                // See https://github.com/tusc/tusc-ui/issues/996
                 feeRateForLTM = 0.5 + 0.5 * network_fee;
             }
 

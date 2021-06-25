@@ -14,7 +14,7 @@ class BaseModal extends React.Component {
             <div>
                 Base Modal was removed by task following below:
                 <br />
-                https://github.com/bitshares/bitshares-ui/issues/1942
+                https://github.com/tusc/tusc-ui/issues/1942
             </div>
         );
     }

@@ -3,7 +3,7 @@ import Translate from "react-translate-component";
 import AccountSelector from "../Account/AccountSelector";
 import AccountActions from "actions/AccountActions";
 import counterpart from "counterpart";
-import {Modal, Button, Input, Select, Form} from "bitshares-ui-style-guide";
+import {Modal, Button, Input, Select, Form} from "tusc-ui-style-guide";
 import utils from "common/utils";
 
 class JoinCommitteeModal extends React.Component {

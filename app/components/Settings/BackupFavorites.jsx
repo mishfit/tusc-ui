@@ -3,7 +3,7 @@ import React from "react";
 import Translate from "react-translate-component";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
-import {Button} from "bitshares-ui-style-guide";
+import {Button} from "tusc-ui-style-guide";
 
 class BackupFavorites extends React.Component {
     makeBackup() {

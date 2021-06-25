@@ -11,12 +11,12 @@ import {
     Icon,
     Popover,
     Alert
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import AccountSelector from "../Account/AccountSelector";
 import FeeAssetSelector from "components/Utility/FeeAssetSelector";
 import counterpart from "counterpart";
 import AccountStore from "stores/AccountStore";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import AmountSelector from "../Utility/AmountSelector";
 import {Asset} from "common/MarketClasses";
 import utils from "common/utils";

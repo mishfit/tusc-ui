@@ -1,5 +1,5 @@
 import React from "react";
-import {Modal, Input, Form, Button, Radio} from "bitshares-ui-style-guide";
+import {Modal, Input, Form, Button, Radio} from "tusc-ui-style-guide";
 import PropTypes from "prop-types";
 import Translate from "react-translate-component";
 import counterpart from "counterpart";

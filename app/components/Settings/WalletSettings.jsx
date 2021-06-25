@@ -4,7 +4,7 @@ import BalanceClaimActive from "../Wallet/BalanceClaimActive";
 import Translate from "react-translate-component";
 import counterpart from "counterpart";
 import WalletDb from "stores/WalletDb";
-import {Form, Button} from "bitshares-ui-style-guide";
+import {Form, Button} from "tusc-ui-style-guide";
 
 const FormItem = Form.Item;
 

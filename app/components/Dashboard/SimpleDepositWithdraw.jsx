@@ -23,8 +23,8 @@ import SettingsStore from "stores/SettingsStore";
 import {DecimalChecker} from "../Utility/DecimalChecker";
 import {openledgerAPIs} from "api/apiConfig";
 import {getWalletName} from "branding";
-import {Modal, Tooltip} from "bitshares-ui-style-guide";
-import {ChainStore} from "bitsharesjs";
+import {Modal, Tooltip} from "tusc-ui-style-guide";
+import {ChainStore} from "tuscjs";
 import FeeAssetSelector from "components/Utility/FeeAssetSelector";
 
 class DepositWithdrawContent extends DecimalChecker {

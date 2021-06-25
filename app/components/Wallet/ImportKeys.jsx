@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "alt-react";
 import cname from "classnames";
-import {PrivateKey, Aes, PublicKey, FetchChain, hash} from "bitsharesjs";
+import {PrivateKey, Aes, PublicKey, FetchChain, hash} from "tuscjs";
 import AccountApi from "api/accountApi";
-import {ChainConfig} from "bitsharesjs-ws";
+import {ChainConfig} from "tuscjs-ws";
 import PrivateKeyStore from "stores/PrivateKeyStore";
 import WalletUnlockActions from "actions/WalletUnlockActions";
 import {WalletCreate} from "components/Wallet/WalletCreate";
@@ -17,11 +17,11 @@ import BalanceClaimAssetTotal from "components/Wallet/BalanceClaimAssetTotal";
 import WalletDb from "stores/WalletDb";
 import ImportKeysStore from "stores/ImportKeysStore";
 
-import {Notification} from "bitshares-ui-style-guide";
+import {Notification} from "tusc-ui-style-guide";
 
 import GenesisFilter from "chain/GenesisFilter";
 
-import {Button, Input} from "bitshares-ui-style-guide";
+import {Button, Input} from "tusc-ui-style-guide";
 
 require("./ImportKeys.scss");
 
@@ -259,7 +259,7 @@ class ImportKeys extends Component {
     }
 
     /**
-    BTS 1.0 hosted wallet backup (wallet.bitshares.org) is supported.
+    BTS 1.0 hosted wallet backup (wallet.tusc.org) is supported.
 
     BTS 1.0 native wallets should use wallet_export_keys instead of a wallet backup.
 

@@ -9,7 +9,7 @@ import {
     Modal,
     Checkbox,
     Collapse
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import ChainTypes from "../Utility/ChainTypes";
 
 class ServiceProviderExplanation extends React.Component {

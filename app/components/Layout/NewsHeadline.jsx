@@ -1,10 +1,10 @@
 import React from "react";
-import {Alert, Icon} from "bitshares-ui-style-guide";
+import {Alert, Icon} from "tusc-ui-style-guide";
 import {Carousel} from "antd";
 import SettingsActions from "actions/SettingsActions";
 import {connect} from "alt-react";
 import SettingsStore from "stores/SettingsStore";
-import {hash} from "bitsharesjs";
+import {hash} from "tuscjs";
 import {getNotifications, getGateways} from "../../lib/chain/onChainConfig";
 
 const getNewsItemHash = news => {
@@ -64,7 +64,7 @@ class NewsHeadline extends React.Component {
 
     getNewsFromGitHub() {
         fetch(
-            "https://api.github.com/repos/blockchainprojects/bitshares-ui/contents/news.json?ref=news_feed_on_the_very_top"
+            "https://api.github.com/repos/blockchainprojects/tusc-ui/contents/news.json?ref=news_feed_on_the_very_top"
         )
             .then(res => {
                 return res.json();

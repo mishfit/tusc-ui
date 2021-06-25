@@ -132,7 +132,7 @@ export const settingsAPIs = {
             contact: "email:admin@iobanker.com"
         },
         {
-            url: "wss://bitshares.openledger.info/ws",
+            url: "wss://tusc.openledger.info/ws",
             location: "Nuremberg",
             region: "Western Europe",
             country: "Germany",
@@ -176,7 +176,7 @@ export const settingsAPIs = {
             country: "U.S.A.",
             location: "Dallas",
             operator: "Witness: Sahkan",
-            contact: "telegram:Sahkan_bitshares"
+            contact: "telegram:Sahkan_tusc"
         },
         {
             url: "wss://kc-us-dex.xeldal.com/ws", // check
@@ -204,21 +204,21 @@ export const settingsAPIs = {
             contact: "telegram:lzmlam;wechat:lzmlam"
         },
         {
-            url: "wss://eu.nodes.bitshares.ws",
+            url: "wss://eu.nodes.tusc.ws",
             region: "Western Europe",
             country: "Germany",
             operator: "Infrastructure Worker",
             contact: "email:info@blockchainprojectsbv.com"
         },
         {
-            url: "wss://us.nodes.bitshares.ws",
+            url: "wss://us.nodes.tusc.ws",
             region: "Northern America",
             country: "U.S.A.",
             operator: "Infrastructure Worker",
             contact: "email:info@blockchainprojectsbv.com"
         },
         {
-            url: "wss://hk.nodes.bitshares.ws",
+            url: "wss://hk.nodes.tusc.ws",
             region: "Eastern Asia",
             country: "Hong Kong",
             operator: "Infrastructure Worker",
@@ -249,7 +249,7 @@ export const settingsAPIs = {
             contact: "telegram:roelandp"
         },
         {
-            url: "wss://api.bitshares.bhuz.info/ws",
+            url: "wss://api.tusc.bhuz.info/ws",
             region: "Northern America",
             country: "Canada",
             operator: "Witness: bhuz",
@@ -295,7 +295,7 @@ export const settingsAPIs = {
             contact: "telegram:eggplant"
         },
         {
-            url: "wss://bitshares.bts123.cc:15138/",
+            url: "wss://tusc.bts123.cc:15138/",
             region: "Eastern Asia",
             country: "China",
             location: "Hangzhou",
@@ -353,15 +353,15 @@ export const settingsAPIs = {
 
         // Testnet
         {
-            url: "wss://node.testnet.bitshares.eu",
+            url: "wss://node.testnet.tusc.eu",
             region: "TESTNET - Western Europe",
             country: "Germany",
             location: "Frankfurt",
-            operator: "BitShares Europe",
+            operator: "TUSC Europe",
             contact: "telegram:xeroc"
         },
         {
-            url: "wss://testnet.nodes.bitshares.ws",
+            url: "wss://testnet.nodes.tusc.ws",
             region: "TESTNET - Western Europe",
             country: "Germany",
             location: "Nuremberg",
@@ -387,28 +387,28 @@ export const settingsAPIs = {
     ],
     ES_WRAPPER_LIST: [
         {
-            url: "https://eu.wrapper.elasticsearch.bitshares.ws",
+            url: "https://eu.wrapper.elasticsearch.tusc.ws",
             region: "Western Europe",
             country: "Germany",
             operator: "Infrastructure Worker",
             contact: "email:info@blockchainprojectsbv.com"
         },
         {
-            url: "https://us.wrapper.elasticsearch.bitshares.ws",
+            url: "https://us.wrapper.elasticsearch.tusc.ws",
             region: "Northern America",
             country: "U.S.A.",
             operator: "Infrastructure Worker",
             contact: "email:info@blockchainprojectsbv.com"
         },
         {
-            url: "https://hk.wrapper.elasticsearch.bitshares.ws",
+            url: "https://hk.wrapper.elasticsearch.tusc.ws",
             region: "Hong Kong",
             country: "China",
             operator: "Infrastructure Worker",
             contact: "email:info@blockchainprojectsbv.com"
         },
         {
-            url: "https://explorer.bitshares-kibana.info",
+            url: "https://explorer.tusc-kibana.info",
             region: "N/A",
             country: "N/A",
             operator: "N/A",

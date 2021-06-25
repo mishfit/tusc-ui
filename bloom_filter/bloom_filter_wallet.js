@@ -3,11 +3,11 @@
 // Filter BTS 0.9.2+ import keys export file so that it will include only private keys
 // that may be found in the BTS 2.0 genesis block.
 // Dependencies:
-// ./bloom_bitshares.dat (1,048,576 bytes) sha1 4d80faa41a5e868899febdc9dab48d1f2d567487992810cf0532f3c0ee2b266c
+// ./bloom_tusc.dat (1,048,576 bytes) sha1 4d80faa41a5e868899febdc9dab48d1f2d567487992810cf0532f3c0ee2b266c
 // nodejs, npm, and: npm install
 
 /*
-* ./bloom.dat is from bitshares/graphene/programs/genesis_util/create_bloom_filter.py
+* ./bloom.dat is from tusc/graphene/programs/genesis_util/create_bloom_filter.py
 * The bloom filter was created with a genesis containing BTS prefixed keys.  Create
 * or dowload this file first.
 */
@@ -21,14 +21,14 @@ var fs = require('fs')
 
 require('coffee-script/register') // npm install coffee-script
 
-var graphenejs = require("bitsharesjs");
+var graphenejs = require("tuscjs");
 var h = graphenejs.hash;
 var key_utils = graphenejs.key;
 const chainPrefix = "BTS";
 
-fs.readFile('bloom_bitshares.dat', function (err, data) {
+fs.readFile('bloom_tusc.dat', function (err, data) {
     if (err) throw err
-    console.error('bloom_bitshares.dat (' + data.length + ' bytes)','sha1',h.sha1(data).toString('hex'),'\n')
+    console.error('bloom_tusc.dat (' + data.length + ' bytes)','sha1',h.sha1(data).toString('hex'),'\n')
 
     var bits_in_filter = data.length * 8 // 8388608 (test data)
     function in_bloom(str) {

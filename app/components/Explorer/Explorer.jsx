@@ -7,7 +7,7 @@ import AssetsContainer from "./AssetsContainer";
 import AccountsContainer from "./AccountsContainer";
 import counterpart from "counterpart";
 import MarketsContainer from "../Exchange/MarketsContainer";
-import {Tabs} from "bitshares-ui-style-guide";
+import {Tabs} from "tusc-ui-style-guide";
 
 class Explorer extends React.Component {
     constructor(props) {

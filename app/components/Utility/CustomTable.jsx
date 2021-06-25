@@ -1,6 +1,6 @@
 import React from "react";
 import counterpart from "counterpart";
-import {Checkbox, Icon, Select} from "bitshares-ui-style-guide";
+import {Checkbox, Icon, Select} from "tusc-ui-style-guide";
 import SettingsActions from "actions/SettingsActions";
 import PaginatedList from "./PaginatedList";
 import "./paginated-list.scss";

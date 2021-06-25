@@ -94,7 +94,7 @@ export default class AssetUtils {
         /**
          * The naming convention is confusing!
          *
-         * bitshares-core knows only settlement_price, which is the feed price as known from UI!
+         * tusc-core knows only settlement_price, which is the feed price as known from UI!
          *
          * UI definition:
          *  - Feed Price: Witness fed price, given by backend as settlement_price

@@ -15,7 +15,7 @@ import WalletChangePassword from "./WalletChangePassword";
 import {WalletCreate} from "./WalletCreate";
 import {BackupCreate, BackupRestore} from "./Backup";
 import BackupBrainkey from "./BackupBrainkey";
-import {Form, Select, Input, Button, Card} from "bitshares-ui-style-guide";
+import {Form, Select, Input, Button, Card} from "tusc-ui-style-guide";
 
 const FormItem = Form.Item;
 const Option = Select.Option;

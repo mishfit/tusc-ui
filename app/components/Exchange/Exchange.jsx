@@ -1,12 +1,12 @@
-import {Apis} from "bitsharesjs-ws";
-import {ChainStore, FetchChain} from "bitsharesjs";
+import {Apis} from "tuscjs-ws";
+import {ChainStore, FetchChain} from "tuscjs";
 import {
     Tabs,
     Collapse,
     Icon as AntIcon,
     Button,
     Tooltip
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import cnames from "classnames";
 import translator from "counterpart";
 import guide from "intro.js";
@@ -40,7 +40,7 @@ import AccountNotifications from "../Notifier/NotifierContainer";
 import TranslateWithLinks from "../Utility/TranslateWithLinks";
 import SimpleDepositWithdraw from "../Dashboard/SimpleDepositWithdraw";
 import SimpleDepositBlocktradesBridge from "../Dashboard/SimpleDepositBlocktradesBridge";
-import {Notification} from "bitshares-ui-style-guide";
+import {Notification} from "tusc-ui-style-guide";
 import PriceAlert from "./PriceAlert";
 import counterpart from "counterpart";
 

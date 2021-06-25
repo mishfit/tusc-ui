@@ -6,7 +6,7 @@ import Translate from "react-translate-component";
 import counterpart from "counterpart";
 import SettingsActions from "actions/SettingsActions";
 import RestoreFavorites from "./RestoreFavorites";
-import {Button, Select} from "bitshares-ui-style-guide";
+import {Button, Select} from "tusc-ui-style-guide";
 
 const Option = Select.Option;
 

@@ -2,7 +2,7 @@ import React from "react";
 import counterpart from "counterpart";
 import ClipboardButton from "react-clipboard.js";
 import Icon from "../Icon/Icon";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 
 const CopyButton = ({
     className = "button",

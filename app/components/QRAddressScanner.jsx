@@ -2,7 +2,7 @@ import React from "react";
 import QrReader from "react-qr-reader";
 import counterpart from "counterpart";
 import PropTypes from "prop-types";
-import {Modal, Button, Icon} from "bitshares-ui-style-guide";
+import {Modal, Button, Icon} from "tusc-ui-style-guide";
 
 class QRScanner extends React.Component {
     modalId = "qr_scanner_modal";

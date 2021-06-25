@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "alt-react";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import Translate from "react-translate-component";
 import cnames from "classnames";
 import MarketsStore from "stores/MarketsStore";
@@ -8,11 +8,11 @@ import SettingsActions from "actions/SettingsActions";
 import SettingsStore from "stores/SettingsStore";
 import utils from "common/utils";
 import PaginatedList from "../Utility/PaginatedList";
-import {Input, Tooltip} from "bitshares-ui-style-guide";
+import {Input, Tooltip} from "tusc-ui-style-guide";
 import Icon from "../Icon/Icon";
 import AssetName from "../Utility/AssetName";
 import {Link} from "react-router-dom";
-import {Icon as AntIcon} from "bitshares-ui-style-guide";
+import {Icon as AntIcon} from "tusc-ui-style-guide";
 
 class MarketsTable extends React.Component {
     constructor() {

@@ -9,7 +9,7 @@ import SettingsActions from "actions/SettingsActions";
 import GdexCache from "../../../lib/common/GdexCache";
 import GdexHistory from "./GdexHistory";
 import GdexAgreementModal from "./GdexAgreementModal";
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Modal, Button} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import {
     fetchWithdrawRule,

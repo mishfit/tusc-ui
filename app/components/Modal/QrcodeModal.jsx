@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import counterpart from "counterpart";
 import Translate from "react-translate-component";
 import QRCode from "qrcode.react";
-import {Aes} from "bitsharesjs";
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Aes} from "tuscjs";
+import {Modal, Button} from "tusc-ui-style-guide";
 
 class QrcodeModal extends React.Component {
     constructor(props) {

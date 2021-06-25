@@ -1,7 +1,7 @@
 import React from "react";
 import utils from "common/utils";
 import Translate from "react-translate-component";
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Modal, Button} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 export default class ConfirmModal extends React.Component {

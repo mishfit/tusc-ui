@@ -7,12 +7,12 @@ import LinkToAccountById from "../Utility/LinkToAccountById";
 import LinkToAssetById from "../Utility/LinkToAssetById";
 import BindToChainState from "../Utility/BindToChainState";
 import TranslateWithLinks from "../Utility/TranslateWithLinks";
-import {ChainTypes as grapheneChainTypes, ChainStore} from "bitsharesjs";
+import {ChainTypes as grapheneChainTypes, ChainStore} from "tuscjs";
 import account_constants from "chain/account_constants";
 import MemoText from "./MemoText";
 import ProposedOperation from "./ProposedOperation";
 import marketUtils from "common/market_utils";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 const ShortObjectId = ({objectId}) => {

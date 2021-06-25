@@ -5,7 +5,7 @@ import AssetName from "../Utility/AssetName";
 import Notify from "notifyjs";
 import FeeAssetSettings from "./FeeAssetSettings";
 
-import {Checkbox, Select, Input, Form, Button} from "bitshares-ui-style-guide";
+import {Checkbox, Select, Input, Form, Button} from "tusc-ui-style-guide";
 import GatewaySelectorModal from "../Gateways/GatewaySelectorModal";
 
 const FormItem = Form.Item;

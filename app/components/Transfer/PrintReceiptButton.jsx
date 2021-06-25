@@ -1,5 +1,5 @@
 import React from "react";
-import {Tooltip, Button} from "bitshares-ui-style-guide";
+import {Tooltip, Button} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
@@ -154,7 +154,7 @@ const printReceipt = ({data, parsePrice}) => {
         },
         theme: "plain"
     });
-    pdf.save("bitshares-receipt-" + to + ".pdf");
+    pdf.save("tusc-receipt-" + to + ".pdf");
 };
 const PrintReceiptButton = ({data, parsePrice}) => {
     const tip = "tooltip.print_receipt",

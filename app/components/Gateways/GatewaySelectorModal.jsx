@@ -12,7 +12,7 @@ import {
     Collapse,
     Tooltip,
     Icon
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import SettingsStore from "stores/SettingsStore";
 import {availableGateways, availableBridges} from "common/gateways";
 import {getFaucet, allowedGateway} from "../../branding";

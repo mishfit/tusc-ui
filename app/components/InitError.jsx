@@ -5,8 +5,8 @@ import SettingsStore from "stores/SettingsStore";
 import Translate from "react-translate-component";
 import WebsocketAddModal from "./Settings/WebsocketAddModal";
 import SettingsActions from "actions/SettingsActions";
-import {Apis} from "bitsharesjs-ws";
-import {Form, Select, Button, Input} from "bitshares-ui-style-guide";
+import {Apis} from "tuscjs-ws";
+import {Form, Select, Button, Input} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 const optionalApis = {enableCrypto: true, enableOrders: true};

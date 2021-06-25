@@ -3,7 +3,7 @@ import FormattedAsset from "../Utility/FormattedAsset";
 import AccountActions from "actions/AccountActions";
 import AccountSelector from "../Account/AccountSelector";
 import BalanceComponent from "../Utility/BalanceComponent";
-import {ChainStore, FetchChain, FetchChainObjects} from "bitsharesjs/es";
+import {ChainStore, FetchChain, FetchChainObjects} from "tuscjs/es";
 import NotificationActions from "actions/NotificationActions";
 import TransactionConfirmStore from "stores/TransactionConfirmStore";
 import {decompress, compress} from "lzma";
@@ -18,7 +18,7 @@ import {
     Icon,
     Tooltip,
     Switch
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import sanitize from "sanitize";
 import counterpart from "counterpart";
 import {hasLoaded} from "../Utility/BindToCurrentAccount";
@@ -441,7 +441,7 @@ class InvoicePay extends React.Component {
                 invoice.to !== this.state.pay_from_name
             ) {
                 qrcode =
-                    `bitshares:operation/transfer?to=${invoice.to}&from=${
+                    `tusc:operation/transfer?to=${invoice.to}&from=${
                         this.state.pay_from_name
                     }&asset=${asset}&amount=${total_amount}` +
                     (invoice.memo ? `&memo=${invoice.memo}` : "");

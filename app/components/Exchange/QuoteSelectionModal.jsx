@@ -5,7 +5,7 @@ import SettingsActions from "actions/SettingsActions";
 import Translate from "react-translate-component";
 import counterpart from "counterpart";
 
-import {Modal, Button} from "bitshares-ui-style-guide";
+import {Modal, Button} from "tusc-ui-style-guide";
 
 export default class QuoteSelectionModal extends React.Component {
     constructor() {

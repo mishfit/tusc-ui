@@ -10,7 +10,7 @@ import {connect} from "alt-react";
 import SettingsActions from "actions/SettingsActions";
 import PropTypes from "prop-types";
 import {getWalletName} from "branding";
-import {Button, Form, Input} from "bitshares-ui-style-guide";
+import {Button, Form, Input} from "tusc-ui-style-guide";
 import counterpart from "counterpart";
 
 class CreateNewWallet extends Component {

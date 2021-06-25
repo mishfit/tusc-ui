@@ -1,6 +1,6 @@
 import React from "react";
 import counterpart from "counterpart";
-import {Table} from "bitshares-ui-style-guide";
+import {Table} from "tusc-ui-style-guide";
 import "./paginated-list.scss";
 export default class PaginatedList extends React.Component {
     static defaultProps = {

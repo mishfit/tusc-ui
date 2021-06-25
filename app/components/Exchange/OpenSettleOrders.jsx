@@ -6,7 +6,7 @@ import AssetName from "../Utility/AssetName";
 import counterpart from "counterpart";
 import getLocale from "browser-locale";
 import TransitionWrapper from "../Utility/TransitionWrapper";
-import {Tooltip} from "bitshares-ui-style-guide";
+import {Tooltip} from "tusc-ui-style-guide";
 
 class TableHeader extends React.Component {
     render() {

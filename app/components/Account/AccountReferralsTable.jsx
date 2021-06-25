@@ -2,14 +2,14 @@ import {connect} from "alt-react";
 import React from "react";
 import {Link} from "react-router-dom";
 import Translate from "react-translate-component";
-import {ChainStore, FetchChain} from "bitsharesjs";
+import {ChainStore, FetchChain} from "tuscjs";
 import ChainTypes from "../Utility/ChainTypes";
 import AccountStore from "stores/AccountStore";
 import BindToChainState from "../Utility/BindToChainState";
 import Statistics from "./Statistics";
 import TimeAgo from "../Utility/TimeAgo";
 import {settingsAPIs} from "api/apiConfig";
-import {Table} from "bitshares-ui-style-guide";
+import {Table} from "tusc-ui-style-guide";
 
 class AccountReferralsTable extends React.Component {
     constructor(prop) {

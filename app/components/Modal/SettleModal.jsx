@@ -8,11 +8,11 @@ import BalanceComponent from "../Utility/BalanceComponent";
 import WalletApi from "api/WalletApi";
 import WalletDb from "stores/WalletDb";
 import counterpart from "counterpart";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "tuscjs";
 import AmountSelector from "../Utility/AmountSelectorStyleGuide";
 import withWorthLessSettlementFlag from "../Utility/withWorthLessSettlementFlag";
 import TranslateWithLinks from "../Utility/TranslateWithLinks";
-import {Alert, Form, Modal, Button, Tooltip} from "bitshares-ui-style-guide";
+import {Alert, Form, Modal, Button, Tooltip} from "tusc-ui-style-guide";
 import utils from "common/utils";
 import AssetWrapper from "../Utility/AssetWrapper";
 

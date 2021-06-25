@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import {ChainStore, FetchChain} from "bitsharesjs";
+import {ChainStore, FetchChain} from "tuscjs";
 import AmountSelector from "../Utility/AmountSelectorStyleGuide";
 import debounceRender from "react-debounce-render";
 import AccountStore from "stores/AccountStore";
@@ -16,7 +16,7 @@ import {
     Icon,
     Form,
     Input
-} from "bitshares-ui-style-guide";
+} from "tusc-ui-style-guide";
 import ApplicationApi from "../../api/ApplicationApi";
 import FeeAssetSelector from "components/Utility/FeeAssetSelector";
 import TranslateWithLinks from "../Utility/TranslateWithLinks";

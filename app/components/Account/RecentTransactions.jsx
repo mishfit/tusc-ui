@@ -4,12 +4,12 @@ import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import utils from "common/utils";
 import JSONModal from "components/Modal/JSONModal";
-import {Icon as AntIcon} from "bitshares-ui-style-guide";
+import {Icon as AntIcon} from "tusc-ui-style-guide";
 import {
     ChainTypes as grapheneChainTypes,
     FetchChain,
     ChainStore
-} from "bitsharesjs";
+} from "tuscjs";
 //import ps from "perfect-scrollbar";
 import counterpart from "counterpart";
 import Icon from "../Icon/Icon";
@@ -18,7 +18,7 @@ import PropTypes from "prop-types";
 import PaginatedList from "../Utility/PaginatedList";
 const {operations} = grapheneChainTypes;
 import LoadingIndicator from "../LoadingIndicator";
-import {Tooltip, Modal, Button, Select, Input} from "bitshares-ui-style-guide";
+import {Tooltip, Modal, Button, Select, Input} from "tusc-ui-style-guide";
 const ops = Object.keys(operations);
 import {Link} from "react-router-dom";
 import FormattedAsset from "../Utility/FormattedAsset";
@@ -94,10 +94,10 @@ class RecentTransactions extends React.Component {
         this.useCustom = counterpart.translate(
             "account.export_modal.use_custom"
         );
-        // https://eswrapper.bitshares.eu/ is not alive
-        // https://wrapper.elasticsearch.bitshares.ws/ is not alive
+        // https://eswrapper.tusc.eu/ is not alive
+        // https://wrapper.elasticsearch.tusc.ws/ is not alive
         // http://bts-es.clockwork.gr:5000/ is alive
-        // https://explorer.bitshares-kibana.info/ is not alive
+        // https://explorer.tusc-kibana.info/ is not alive
         // http://185.208.208.184:5000/es/ is alive
         this.showExportModal = this.showExportModal.bind(this);
         this.hideExportModal = this.hideExportModal.bind(this);
